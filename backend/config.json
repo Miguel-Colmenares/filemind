@@ -1,0 +1,23 @@
+{
+  "perfil": "constitucional",
+  "data_dir": "data",
+  "monitored_groups": [
+    "Obra Vía Puerto Gaitán",
+    "Compras Vichada",
+    "Residentes de obra"
+  ],
+  "quarantine_threshold": 70,
+  "max_protocol_seconds": 15,
+  "max_file_mb": 20,
+  "log_retention_days": 183,
+  "sandbox_backend": "auto",
+  "sandbox_timeout_s": 8,
+  "sandbox_image": "python:3.11-slim",
+  "malwarebazaar_api_key": "",
+  "virustotal_api_key": "",
+  "rdap_lookup": false,
+  "topic_min_confidence": 0.35,
+  "workers": 4,
+  "api_token": "",
+  "notify_webhook": ""
+}

@@ -1,0 +1,280 @@
+{
+  "task": "riesgo",
+  "best_model": "RegLogistica",
+  "comparison": {
+    "RegLogistica": {
+      "accuracy": 1.0,
+      "f1_macro": 1.0,
+      "train_s": 0.02
+    },
+    "ArbolDecision": {
+      "accuracy": 0.9428571428571428,
+      "f1_macro": 0.9407713813408902,
+      "train_s": 0.01
+    },
+    "RandomForest": {
+      "accuracy": 1.0,
+      "f1_macro": 1.0,
+      "train_s": 0.43
+    },
+    "GradientBoosting": {
+      "accuracy": 1.0,
+      "f1_macro": 1.0,
+      "train_s": 0.31
+    }
+  },
+  "split": {
+    "train": 490,
+    "val": 105,
+    "test": 105
+  },
+  "test_multiclase": {
+    "accuracy": 1.0,
+    "precision_macro": 1.0,
+    "recall_macro": 1.0,
+    "f1_macro": 1.0,
+    "per_class": {
+      "legitimo": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 54.0
+      },
+      "phishing": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 26.0
+      },
+      "ransomware": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 25.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        54,
+        0,
+        0
+      ],
+      [
+        0,
+        26,
+        0
+      ],
+      [
+        0,
+        0,
+        25
+      ]
+    ],
+    "labels": [
+      "legitimo",
+      "phishing",
+      "ransomware"
+    ]
+  },
+  "average_precision": {
+    "legitimo": 0.9999999999999999,
+    "phishing": 0.9999999999999999,
+    "ransomware": 1.0000000000000002
+  },
+  "cuarentena_umbral_70": {
+    "tp": 51,
+    "fn": 0,
+    "fp": 0,
+    "tn": 54,
+    "tasa_falsos_negativos": 0.0,
+    "tasa_falsos_positivos": 0.0,
+    "RNF3_cumple(<=5%)": true,
+    "RNF4_cumple(<=10%)": true
+  },
+  "feature_importances_top15": [
+    [
+      "phish_phrases",
+      0.13348736742701037
+    ],
+    [
+      "url_shortener",
+      0.07631297443021975
+    ],
+    [
+      "powershell",
+      0.06895334043958394
+    ],
+    [
+      "sbx_embedded_exe",
+      0.06601428332045516
+    ],
+    [
+      "url_risky_tld",
+      0.047983102777864065
+    ],
+    [
+      "sbx_active_content",
+      0.04775340899931529
+    ],
+    [
+      "url_ip_host",
+      0.04523286640348915
+    ],
+    [
+      "remote_template",
+      0.041341228693164846
+    ],
+    [
+      "macro_autoexec",
+      0.03733780692259242
+    ],
+    [
+      "pdf_javascript",
+      0.035799948999859464
+    ],
+    [
+      "macro_suspicious",
+      0.03527301768789121
+    ],
+    [
+      "dde",
+      0.03454658273922854
+    ],
+    [
+      "url_count",
+      0.033315474845416714
+    ],
+    [
+      "url_punycode",
+      0.025573071067807828
+    ],
+    [
+      "sbx_hidden_objstm",
+      0.02455181150648716
+    ]
+  ],
+  "validacion_cruzada_5": {
+    "folds": [
+      {
+        "fold": 1,
+        "fnr": 0.07352941176470588,
+        "fpr": 0.0
+      },
+      {
+        "fold": 2,
+        "fnr": 0.0,
+        "fpr": 0.0
+      },
+      {
+        "fold": 3,
+        "fnr": 0.04411764705882353,
+        "fpr": 0.0
+      },
+      {
+        "fold": 4,
+        "fnr": 0.0,
+        "fpr": 0.0
+      },
+      {
+        "fold": 5,
+        "fnr": 0.0,
+        "fpr": 0.0
+      }
+    ],
+    "fnr_media": 0.023529411764705882,
+    "fpr_media": 0.0
+  },
+  "ataques_no_vistos": {
+    "completo": {
+      "n": 61,
+      "detectados_puntaje_final": 1.0,
+      "detectados_solo_modelo": 1.0
+    },
+    "dde": {
+      "n": 16,
+      "detectados_puntaje_final": 1.0,
+      "detectados_solo_modelo": 0.0
+    },
+    "doble_extension": {
+      "n": 21,
+      "detectados_puntaje_final": 1.0,
+      "detectados_solo_modelo": 0.5714285714285714
+    },
+    "docm_autoopen": {
+      "n": 22,
+      "detectados_puntaje_final": 1.0,
+      "detectados_solo_modelo": 1.0
+    },
+    "exe_disfrazado": {
+      "n": 7,
+      "detectados_puntaje_final": 1.0,
+      "detectados_solo_modelo": 1.0
+    },
+    "exe_embebido": {
+      "n": 11,
+      "detectados_puntaje_final": 1.0,
+      "detectados_solo_modelo": 0.0
+    },
+    "html_login": {
+      "n": 12,
+      "detectados_puntaje_final": 1.0,
+      "detectados_solo_modelo": 1.0
+    },
+    "nota_rescate": {
+      "n": 7,
+      "detectados_puntaje_final": 1.0,
+      "detectados_solo_modelo": 0.0
+    },
+    "ole_macro": {
+      "n": 18,
+      "detectados_puntaje_final": 1.0,
+      "detectados_solo_modelo": 1.0
+    },
+    "pdf_hex": {
+      "n": 12,
+      "detectados_puntaje_final": 1.0,
+      "detectados_solo_modelo": 1.0
+    },
+    "pdf_js": {
+      "n": 11,
+      "detectados_puntaje_final": 1.0,
+      "detectados_solo_modelo": 1.0
+    },
+    "pdf_launch": {
+      "n": 7,
+      "detectados_puntaje_final": 1.0,
+      "detectados_solo_modelo": 1.0
+    },
+    "pdf_objstm": {
+      "n": 15,
+      "detectados_puntaje_final": 1.0,
+      "detectados_solo_modelo": 0.0
+    },
+    "plantilla_remota": {
+      "n": 11,
+      "detectados_puntaje_final": 1.0,
+      "detectados_solo_modelo": 0.0
+    },
+    "powershell_b64": {
+      "n": 12,
+      "detectados_puntaje_final": 1.0,
+      "detectados_solo_modelo": 0.0
+    },
+    "solo_enlace": {
+      "n": 19,
+      "detectados_puntaje_final": 0.6842105263157895,
+      "detectados_solo_modelo": 0.6842105263157895
+    },
+    "suplantacion_marca": {
+      "n": 39,
+      "detectados_puntaje_final": 1.0,
+      "detectados_solo_modelo": 1.0
+    },
+    "sutil": {
+      "n": 39,
+      "detectados_puntaje_final": 0.0,
+      "detectados_solo_modelo": 0.0
+    }
+  },
+  "trained_at": "2026-09-26 07:42:10"
+}

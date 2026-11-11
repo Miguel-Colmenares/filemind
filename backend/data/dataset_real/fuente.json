@@ -1,0 +1,29 @@
+{
+ "descripcion": "Sentencias reales de la Corte Constitucional de Colombia",
+ "texto": "Hugging Face, conjunto Manuel/sentencias-corte-cons-colombia-1992-2021 (licencia CC-BY-4.0)",
+ "etiquetas": "datos.gov.co, conjunto oficial Sentencias proferidas por la Corte Constitucional (columna proceso)",
+ "sentencias_publicadas": 23750,
+ "con_etiqueta_oficial": 29084,
+ "descartadas_sin_referencia": 305,
+ "descartadas_sin_etiqueta": 96,
+ "disponibles": {
+  "DecretosLegislativos": 341,
+  "Inconstitucionalidad": 5204,
+  "Objeciones": 177,
+  "Tratados": 431,
+  "Tutela": 17196
+ },
+ "usadas": {
+  "DecretosLegislativos": 250,
+  "Inconstitucionalidad": 250,
+  "Objeciones": 177,
+  "Tratados": 250,
+  "Tutela": 250
+ },
+ "total_usadas": 1177,
+ "desde": "1992-04-03",
+ "hasta": "2021-03-19",
+ "fragmento_caracteres": 3000,
+ "por_clase_max": 250,
+ "semilla": 42
+}

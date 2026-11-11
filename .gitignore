@@ -1,0 +1,65 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+.ruff_cache/
+
+# Datos de ejecución (se generan al usar el sistema)
+backend/data/biblioteca/
+backend/data/cuarentena/
+backend/data/inbox/
+backend/data/filemind.db
+backend/data/api_token.txt
+backend/data/audit.jsonl
+backend/data/uptime.log
+backend/data/*cache*.json
+
+# Interfaz
+frontend/node_modules/
+
+# Puente de WhatsApp
+whatsapp-gateway/node_modules/
+whatsapp-gateway/.wwebjs_auth/
+whatsapp-gateway/.wwebjs_cache/
+whatsapp-gateway/.env
+
+# Editor / sistema
+.DS_Store
+Thumbs.db
+
+respaldos/
+whatsapp-gateway/.pendientes/
+
+# Datos privados o pesados que no van al repositorio público
+backend/data/puente_whatsapp.log
+backend/data/escritorio.log
+backend/data/escritorio_webview/
+backend/data/fuentes/
+backend/data/dataset/
+~$*
+
+# Documentos de Office y PDF fuera del repositorio
+*.docx
+*.pptx
+*.pdf
+
+# Interfaz compilada: se genera con «npm run build» (o dentro de Docker)
+frontend/dist/
+
+# Variables de entorno con secretos (se comparte solo el ejemplo)
+.env
+*.env
+!.env.example
+!**/.env.example
+
+# Registros y proceso del puente cuando lo enciende FileMind
+backend/data/*.log
+backend/data/*.pid
+
+# Carpeta del bufete montada en Docker y datos locales de despliegue
+bufete/
+
+# respaldos locales de la base y documentos (scripts/limpiar_demo.py)
+backend/data/respaldo_*
+backend/data/pack_demo/

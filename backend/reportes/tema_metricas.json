@@ -1,0 +1,1827 @@
+{
+  "task": "clasificacion_tematica",
+  "best_model": "SVM-lineal",
+  "comparison": {
+    "NaiveBayes": {
+      "accuracy": 0.8813559322033898,
+      "f1_macro": 0.884073287130079,
+      "train_s": 7.35
+    },
+    "RegLogistica": {
+      "accuracy": 0.902542372881356,
+      "f1_macro": 0.9040222563289764,
+      "train_s": 10.33
+    },
+    "SVM-lineal": {
+      "accuracy": 0.9110169491525424,
+      "f1_macro": 0.9116368353056512,
+      "train_s": 8.95
+    },
+    "RandomForest": {
+      "accuracy": 0.8940677966101694,
+      "f1_macro": 0.8951877196679485,
+      "train_s": 8.97
+    }
+  },
+  "modelos": {
+    "NaiveBayes": {
+      "hiperparametros": "ComplementNB, alpha = 0,3",
+      "train_s": 7.35,
+      "parametros": {
+        "vectorizador_palabras": {
+          "analyzer": "word",
+          "max_df": 1.0,
+          "max_features": null,
+          "min_df": 2,
+          "ngram_range": [
+            1,
+            2
+          ],
+          "norm": "l2",
+          "sublinear_tf": true,
+          "use_idf": true
+        },
+        "vectorizador_caracteres": {
+          "analyzer": "char_wb",
+          "max_df": 1.0,
+          "max_features": 40000,
+          "min_df": 2,
+          "ngram_range": [
+            3,
+            5
+          ],
+          "norm": "l2",
+          "sublinear_tf": true,
+          "use_idf": true
+        },
+        "clasificador": {
+          "alpha": 0.3,
+          "class_prior": null,
+          "fit_prior": true,
+          "force_alpha": true,
+          "norm": false
+        },
+        "aprendidos": {
+          "clases": [
+            "DecretosLegislativos",
+            "Inconstitucionalidad",
+            "Objeciones",
+            "Tratados",
+            "Tutela"
+          ],
+          "rasgos": 66913
+        }
+      },
+      "latencia_ms": {
+        "media": 13.243,
+        "p50": 12.727,
+        "p95": 17.101,
+        "max": 24.701,
+        "documentos_por_s": 75.5,
+        "n": 118
+      },
+      "tamano_kb": 8056.9,
+      "por_clase_prueba": {
+        "Tutela": {
+          "precision": 0.8621,
+          "recall": 1.0,
+          "f1": 0.9259,
+          "soporte": 25
+        },
+        "Inconstitucionalidad": {
+          "precision": 0.9167,
+          "recall": 0.88,
+          "f1": 0.898,
+          "soporte": 25
+        },
+        "Tratados": {
+          "precision": 0.8065,
+          "recall": 1.0,
+          "f1": 0.8929,
+          "soporte": 25
+        },
+        "DecretosLegislativos": {
+          "precision": 1.0,
+          "recall": 0.88,
+          "f1": 0.9362,
+          "soporte": 25
+        },
+        "Objeciones": {
+          "precision": 1.0,
+          "recall": 0.6667,
+          "f1": 0.8,
+          "soporte": 18
+        }
+      },
+      "por_clase_todos": {
+        "Tutela": {
+          "precision": 0.8885,
+          "recall": 0.956,
+          "f1": 0.921,
+          "soporte": 250
+        },
+        "Inconstitucionalidad": {
+          "precision": 0.8606,
+          "recall": 0.864,
+          "f1": 0.8623,
+          "soporte": 250
+        },
+        "Tratados": {
+          "precision": 0.917,
+          "recall": 0.972,
+          "f1": 0.9437,
+          "soporte": 250
+        },
+        "DecretosLegislativos": {
+          "precision": 0.8988,
+          "recall": 0.924,
+          "f1": 0.9112,
+          "soporte": 250
+        },
+        "Objeciones": {
+          "precision": 0.9704,
+          "recall": 0.7401,
+          "f1": 0.8397,
+          "soporte": 177
+        }
+      },
+      "val": {
+        "accuracy": 0.8813559322033898,
+        "f1_macro": 0.884073287130079
+      },
+      "test": {
+        "accuracy": 0.8983050847457628,
+        "precision_macro": 0.9170374490174268,
+        "recall_macro": 0.8853333333333333,
+        "f1_macro": 0.8905824930444991,
+        "confusion_matrix": [
+          [
+            25,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            22,
+            2,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            25,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            1,
+            22,
+            0
+          ],
+          [
+            2,
+            1,
+            3,
+            0,
+            12
+          ]
+        ]
+      },
+      "test_aciertos": 106,
+      "total_prueba": 118,
+      "todos": {
+        "accuracy": 0.9005947323704333,
+        "precision_macro": 0.9070435585252549,
+        "recall_macro": 0.8912225988700564,
+        "f1_macro": 0.895590577913261,
+        "confusion_matrix": [
+          [
+            239,
+            7,
+            1,
+            3,
+            0
+          ],
+          [
+            14,
+            216,
+            8,
+            9,
+            3
+          ],
+          [
+            0,
+            3,
+            243,
+            3,
+            1
+          ],
+          [
+            6,
+            8,
+            5,
+            231,
+            0
+          ],
+          [
+            10,
+            17,
+            8,
+            11,
+            131
+          ]
+        ]
+      },
+      "aciertos": 1060,
+      "errores": 117,
+      "total_documentos": 1177,
+      "por_categoria": {
+        "Tutela": {
+          "aciertos": 239,
+          "no_reconocidos": 11,
+          "falsos_positivos": 30,
+          "verdaderos_negativos": 897,
+          "tpr": 0.956,
+          "fpr": 0.032362459546925564
+        },
+        "Inconstitucionalidad": {
+          "aciertos": 216,
+          "no_reconocidos": 34,
+          "falsos_positivos": 35,
+          "verdaderos_negativos": 892,
+          "tpr": 0.864,
+          "fpr": 0.037756202804746494
+        },
+        "Tratados": {
+          "aciertos": 243,
+          "no_reconocidos": 7,
+          "falsos_positivos": 22,
+          "verdaderos_negativos": 905,
+          "tpr": 0.972,
+          "fpr": 0.023732470334412083
+        },
+        "DecretosLegislativos": {
+          "aciertos": 231,
+          "no_reconocidos": 19,
+          "falsos_positivos": 26,
+          "verdaderos_negativos": 901,
+          "tpr": 0.924,
+          "fpr": 0.028047464940668825
+        },
+        "Objeciones": {
+          "aciertos": 131,
+          "no_reconocidos": 46,
+          "falsos_positivos": 4,
+          "verdaderos_negativos": 996,
+          "tpr": 0.7401129943502824,
+          "fpr": 0.004
+        }
+      },
+      "auc_por_categoria": {
+        "Tutela": 0.9951628910463862,
+        "Inconstitucionalidad": 0.9748349514563106,
+        "Tratados": 0.9966601941747573,
+        "DecretosLegislativos": 0.9919870550161811,
+        "Objeciones": 0.9843333333333334
+      },
+      "fpr_macro": 0.025179719525350593,
+      "tpr_macro": 0.8912225988700564,
+      "validacion_cruzada": [
+        {
+          "particion": 1,
+          "fpr": 0.026806451612903227,
+          "tpr": 0.8937777777777777
+        },
+        {
+          "particion": 2,
+          "fpr": 0.025655913978494628,
+          "tpr": 0.8837777777777778
+        },
+        {
+          "particion": 3,
+          "fpr": 0.02694594594594595,
+          "tpr": 0.8811428571428571
+        },
+        {
+          "particion": 4,
+          "fpr": 0.022702702702702703,
+          "tpr": 0.9022857142857144
+        },
+        {
+          "particion": 5,
+          "fpr": 0.023783783783783784,
+          "tpr": 0.8948571428571428
+        }
+      ],
+      "terminos": {
+        "DecretosLegislativos": [
+          [
+            "decreto legislativo",
+            2.015
+          ],
+          [
+            "estados excepcion",
+            1.872
+          ],
+          [
+            "estado emergencia",
+            1.864
+          ]
+        ],
+        "Inconstitucionalidad": [
+          [
+            "norma acusada",
+            1.821
+          ],
+          [
+            "acusada",
+            1.736
+          ],
+          [
+            "norma demandada",
+            1.286
+          ]
+        ],
+        "Objeciones": [
+          [
+            "objeciones",
+            2.104
+          ],
+          [
+            "objetado",
+            1.901
+          ],
+          [
+            "objeciones presidenciales",
+            1.858
+          ]
+        ],
+        "Tratados": [
+          [
+            "aprobatoria",
+            1.986
+          ],
+          [
+            "ley aprobatoria",
+            1.969
+          ],
+          [
+            "cooperacion",
+            1.832
+          ]
+        ],
+        "Tutela": [
+          [
+            "accion tutela",
+            2.059
+          ],
+          [
+            "tutela",
+            2.058
+          ],
+          [
+            "juzgado",
+            1.637
+          ]
+        ]
+      },
+      "graficas": {
+        "dispersion": "tema_naivebayes_dispersion.png",
+        "roc": "tema_naivebayes_roc.png",
+        "aciertos": "tema_naivebayes_aciertos.png",
+        "matriz": "tema_naivebayes_matriz.png",
+        "palabras": "tema_naivebayes_palabras.png"
+      }
+    },
+    "RegLogistica": {
+      "hiperparametros": "LogisticRegression multinomial, L2, C = 8, lbfgs, 2000 iteraciones",
+      "train_s": 10.33,
+      "parametros": {
+        "vectorizador_palabras": {
+          "analyzer": "word",
+          "max_df": 1.0,
+          "max_features": null,
+          "min_df": 2,
+          "ngram_range": [
+            1,
+            2
+          ],
+          "norm": "l2",
+          "sublinear_tf": true,
+          "use_idf": true
+        },
+        "vectorizador_caracteres": {
+          "analyzer": "char_wb",
+          "max_df": 1.0,
+          "max_features": 40000,
+          "min_df": 2,
+          "ngram_range": [
+            3,
+            5
+          ],
+          "norm": "l2",
+          "sublinear_tf": true,
+          "use_idf": true
+        },
+        "clasificador": {
+          "C": 8.0,
+          "class_weight": null,
+          "dual": false,
+          "fit_intercept": true,
+          "intercept_scaling": 1,
+          "l1_ratio": 0.0,
+          "max_iter": 2000,
+          "n_jobs": null,
+          "penalty": "deprecated",
+          "random_state": null,
+          "solver": "lbfgs",
+          "tol": 0.0001,
+          "verbose": 0,
+          "warm_start": false
+        },
+        "aprendidos": {
+          "clases": [
+            "DecretosLegislativos",
+            "Inconstitucionalidad",
+            "Objeciones",
+            "Tratados",
+            "Tutela"
+          ],
+          "rasgos": 66913,
+          "iteraciones_usadas": 37
+        }
+      },
+      "latencia_ms": {
+        "media": 11.771,
+        "p50": 11.533,
+        "p95": 15.013,
+        "max": 17.552,
+        "documentos_por_s": 85.0,
+        "n": 118
+      },
+      "tamano_kb": 4920.4,
+      "por_clase_prueba": {
+        "Tutela": {
+          "precision": 0.96,
+          "recall": 0.96,
+          "f1": 0.96,
+          "soporte": 25
+        },
+        "Inconstitucionalidad": {
+          "precision": 0.8462,
+          "recall": 0.88,
+          "f1": 0.8627,
+          "soporte": 25
+        },
+        "Tratados": {
+          "precision": 0.9259,
+          "recall": 1.0,
+          "f1": 0.9615,
+          "soporte": 25
+        },
+        "DecretosLegislativos": {
+          "precision": 0.9545,
+          "recall": 0.84,
+          "f1": 0.8936,
+          "soporte": 25
+        },
+        "Objeciones": {
+          "precision": 0.8889,
+          "recall": 0.8889,
+          "f1": 0.8889,
+          "soporte": 18
+        }
+      },
+      "por_clase_todos": {
+        "Tutela": {
+          "precision": 0.9216,
+          "recall": 0.94,
+          "f1": 0.9307,
+          "soporte": 250
+        },
+        "Inconstitucionalidad": {
+          "precision": 0.8473,
+          "recall": 0.888,
+          "f1": 0.8672,
+          "soporte": 250
+        },
+        "Tratados": {
+          "precision": 0.9494,
+          "recall": 0.976,
+          "f1": 0.9625,
+          "soporte": 250
+        },
+        "DecretosLegislativos": {
+          "precision": 0.928,
+          "recall": 0.928,
+          "f1": 0.928,
+          "soporte": 250
+        },
+        "Objeciones": {
+          "precision": 0.9412,
+          "recall": 0.8136,
+          "f1": 0.8727,
+          "soporte": 177
+        }
+      },
+      "val": {
+        "accuracy": 0.902542372881356,
+        "f1_macro": 0.9040222563289764
+      },
+      "test": {
+        "accuracy": 0.9152542372881356,
+        "precision_macro": 0.9151028231028231,
+        "recall_macro": 0.9137777777777778,
+        "f1_macro": 0.9133578939486323,
+        "confusion_matrix": [
+          [
+            24,
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            1,
+            22,
+            0,
+            0,
+            2
+          ],
+          [
+            0,
+            0,
+            25,
+            0,
+            0
+          ],
+          [
+            0,
+            3,
+            1,
+            21,
+            0
+          ],
+          [
+            0,
+            1,
+            1,
+            0,
+            16
+          ]
+        ]
+      },
+      "test_aciertos": 108,
+      "total_prueba": 118,
+      "todos": {
+        "accuracy": 0.9150382327952421,
+        "precision_macro": 0.9174979369452952,
+        "recall_macro": 0.9091118644067796,
+        "f1_macro": 0.91222649937331,
+        "confusion_matrix": [
+          [
+            235,
+            10,
+            1,
+            3,
+            1
+          ],
+          [
+            11,
+            222,
+            5,
+            7,
+            5
+          ],
+          [
+            1,
+            3,
+            244,
+            0,
+            2
+          ],
+          [
+            4,
+            10,
+            3,
+            232,
+            1
+          ],
+          [
+            4,
+            17,
+            4,
+            8,
+            144
+          ]
+        ]
+      },
+      "aciertos": 1077,
+      "errores": 100,
+      "total_documentos": 1177,
+      "por_categoria": {
+        "Tutela": {
+          "aciertos": 235,
+          "no_reconocidos": 15,
+          "falsos_positivos": 20,
+          "verdaderos_negativos": 907,
+          "tpr": 0.94,
+          "fpr": 0.021574973031283712
+        },
+        "Inconstitucionalidad": {
+          "aciertos": 222,
+          "no_reconocidos": 28,
+          "falsos_positivos": 40,
+          "verdaderos_negativos": 887,
+          "tpr": 0.888,
+          "fpr": 0.043149946062567425
+        },
+        "Tratados": {
+          "aciertos": 244,
+          "no_reconocidos": 6,
+          "falsos_positivos": 13,
+          "verdaderos_negativos": 914,
+          "tpr": 0.976,
+          "fpr": 0.014023732470334413
+        },
+        "DecretosLegislativos": {
+          "aciertos": 232,
+          "no_reconocidos": 18,
+          "falsos_positivos": 18,
+          "verdaderos_negativos": 909,
+          "tpr": 0.928,
+          "fpr": 0.019417475728155338
+        },
+        "Objeciones": {
+          "aciertos": 144,
+          "no_reconocidos": 33,
+          "falsos_positivos": 9,
+          "verdaderos_negativos": 991,
+          "tpr": 0.8135593220338984,
+          "fpr": 0.009
+        }
+      },
+      "auc_por_categoria": {
+        "Tutela": 0.9958403451995685,
+        "Inconstitucionalidad": 0.9789341963322546,
+        "Tratados": 0.9984811218985976,
+        "DecretosLegislativos": 0.99438619201726,
+        "Objeciones": 0.9853502824858758
+      },
+      "fpr_macro": 0.021433225458468177,
+      "tpr_macro": 0.9091118644067796,
+      "validacion_cruzada": [
+        {
+          "particion": 1,
+          "fpr": 0.01927956989247312,
+          "tpr": 0.9233333333333332
+        },
+        {
+          "particion": 2,
+          "fpr": 0.02880645161290323,
+          "tpr": 0.8748888888888888
+        },
+        {
+          "particion": 3,
+          "fpr": 0.01937837837837838,
+          "tpr": 0.9177142857142856
+        },
+        {
+          "particion": 4,
+          "fpr": 0.021540540540540543,
+          "tpr": 0.908
+        },
+        {
+          "particion": 5,
+          "fpr": 0.018135135135135136,
+          "tpr": 0.9217142857142857
+        }
+      ],
+      "terminos": {
+        "DecretosLegislativos": [
+          [
+            "decreto",
+            2.409
+          ],
+          [
+            "emergencia",
+            1.836
+          ],
+          [
+            "decreto legislativo",
+            1.452
+          ]
+        ],
+        "Inconstitucionalidad": [
+          [
+            "demanda",
+            1.763
+          ],
+          [
+            "norma",
+            1.672
+          ],
+          [
+            "acusada",
+            1.601
+          ]
+        ],
+        "Objeciones": [
+          [
+            "proyecto",
+            2.466
+          ],
+          [
+            "objeciones",
+            2.251
+          ],
+          [
+            "proyecto ley",
+            1.817
+          ]
+        ],
+        "Tratados": [
+          [
+            "convenio",
+            1.642
+          ],
+          [
+            "tratado",
+            1.518
+          ],
+          [
+            "internacional",
+            1.396
+          ]
+        ],
+        "Tutela": [
+          [
+            "tutela",
+            2.449
+          ],
+          [
+            "accion tutela",
+            1.659
+          ],
+          [
+            "sala",
+            1.201
+          ]
+        ]
+      },
+      "graficas": {
+        "dispersion": "tema_reglogistica_dispersion.png",
+        "roc": "tema_reglogistica_roc.png",
+        "aciertos": "tema_reglogistica_aciertos.png",
+        "matriz": "tema_reglogistica_matriz.png",
+        "palabras": "tema_reglogistica_palabras.png"
+      }
+    },
+    "SVM-lineal": {
+      "hiperparametros": "LinearSVC, C = 0,7, calibrada con 3 particiones (sigmoide)",
+      "train_s": 8.95,
+      "parametros": {
+        "vectorizador_palabras": {
+          "analyzer": "word",
+          "max_df": 1.0,
+          "max_features": null,
+          "min_df": 2,
+          "ngram_range": [
+            1,
+            2
+          ],
+          "norm": "l2",
+          "sublinear_tf": true,
+          "use_idf": true
+        },
+        "vectorizador_caracteres": {
+          "analyzer": "char_wb",
+          "max_df": 1.0,
+          "max_features": 40000,
+          "min_df": 2,
+          "ngram_range": [
+            3,
+            5
+          ],
+          "norm": "l2",
+          "sublinear_tf": true,
+          "use_idf": true
+        },
+        "clasificador": {
+          "svm__C": 0.7,
+          "svm__class_weight": null,
+          "svm__dual": "auto",
+          "svm__fit_intercept": true,
+          "svm__intercept_scaling": 1,
+          "svm__loss": "squared_hinge",
+          "svm__max_iter": 1000,
+          "svm__multi_class": "ovr",
+          "svm__penalty": "l2",
+          "svm__random_state": null,
+          "svm__tol": 0.0001,
+          "svm__verbose": 0,
+          "cv": 3,
+          "ensemble": "auto",
+          "method": "sigmoid"
+        },
+        "aprendidos": {
+          "clases": [
+            "DecretosLegislativos",
+            "Inconstitucionalidad",
+            "Objeciones",
+            "Tratados",
+            "Tutela"
+          ],
+          "rasgos": 66913
+        }
+      },
+      "latencia_ms": {
+        "media": 15.89,
+        "p50": 14.996,
+        "p95": 20.401,
+        "max": 21.349,
+        "documentos_por_s": 62.9,
+        "n": 118
+      },
+      "tamano_kb": 10152.6,
+      "por_clase_prueba": {
+        "Tutela": {
+          "precision": 0.96,
+          "recall": 0.96,
+          "f1": 0.96,
+          "soporte": 25
+        },
+        "Inconstitucionalidad": {
+          "precision": 0.88,
+          "recall": 0.88,
+          "f1": 0.88,
+          "soporte": 25
+        },
+        "Tratados": {
+          "precision": 0.8929,
+          "recall": 1.0,
+          "f1": 0.9434,
+          "soporte": 25
+        },
+        "DecretosLegislativos": {
+          "precision": 0.9565,
+          "recall": 0.88,
+          "f1": 0.9167,
+          "soporte": 25
+        },
+        "Objeciones": {
+          "precision": 0.9412,
+          "recall": 0.8889,
+          "f1": 0.9143,
+          "soporte": 18
+        }
+      },
+      "por_clase_todos": {
+        "Tutela": {
+          "precision": 0.9328,
+          "recall": 0.944,
+          "f1": 0.9384,
+          "soporte": 250
+        },
+        "Inconstitucionalidad": {
+          "precision": 0.873,
+          "recall": 0.88,
+          "f1": 0.8765,
+          "soporte": 250
+        },
+        "Tratados": {
+          "precision": 0.9498,
+          "recall": 0.984,
+          "f1": 0.9666,
+          "soporte": 250
+        },
+        "DecretosLegislativos": {
+          "precision": 0.9291,
+          "recall": 0.944,
+          "f1": 0.9365,
+          "soporte": 250
+        },
+        "Objeciones": {
+          "precision": 0.9371,
+          "recall": 0.8418,
+          "f1": 0.8869,
+          "soporte": 177
+        }
+      },
+      "val": {
+        "accuracy": 0.9110169491525424,
+        "f1_macro": 0.9116368353056512
+      },
+      "test": {
+        "accuracy": 0.923728813559322,
+        "precision_macro": 0.9261110705151626,
+        "recall_macro": 0.9217777777777776,
+        "f1_macro": 0.922869721473495,
+        "confusion_matrix": [
+          [
+            24,
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            1,
+            22,
+            1,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            25,
+            0,
+            0
+          ],
+          [
+            0,
+            2,
+            1,
+            22,
+            0
+          ],
+          [
+            0,
+            1,
+            1,
+            0,
+            16
+          ]
+        ]
+      },
+      "test_aciertos": 109,
+      "total_prueba": 118,
+      "todos": {
+        "accuracy": 0.923534409515718,
+        "precision_macro": 0.9243739846880409,
+        "recall_macro": 0.918761581920904,
+        "f1_macro": 0.9209755364822267,
+        "confusion_matrix": [
+          [
+            236,
+            9,
+            1,
+            3,
+            1
+          ],
+          [
+            10,
+            220,
+            7,
+            8,
+            5
+          ],
+          [
+            1,
+            2,
+            246,
+            0,
+            1
+          ],
+          [
+            3,
+            6,
+            2,
+            236,
+            3
+          ],
+          [
+            3,
+            15,
+            3,
+            7,
+            149
+          ]
+        ]
+      },
+      "aciertos": 1087,
+      "errores": 90,
+      "total_documentos": 1177,
+      "por_categoria": {
+        "Tutela": {
+          "aciertos": 236,
+          "no_reconocidos": 14,
+          "falsos_positivos": 17,
+          "verdaderos_negativos": 910,
+          "tpr": 0.944,
+          "fpr": 0.018338727076591153
+        },
+        "Inconstitucionalidad": {
+          "aciertos": 220,
+          "no_reconocidos": 30,
+          "falsos_positivos": 32,
+          "verdaderos_negativos": 895,
+          "tpr": 0.88,
+          "fpr": 0.034519956850053934
+        },
+        "Tratados": {
+          "aciertos": 246,
+          "no_reconocidos": 4,
+          "falsos_positivos": 13,
+          "verdaderos_negativos": 914,
+          "tpr": 0.984,
+          "fpr": 0.014023732470334413
+        },
+        "DecretosLegislativos": {
+          "aciertos": 236,
+          "no_reconocidos": 14,
+          "falsos_positivos": 18,
+          "verdaderos_negativos": 909,
+          "tpr": 0.944,
+          "fpr": 0.019417475728155338
+        },
+        "Objeciones": {
+          "aciertos": 149,
+          "no_reconocidos": 28,
+          "falsos_positivos": 10,
+          "verdaderos_negativos": 990,
+          "tpr": 0.8418079096045198,
+          "fpr": 0.01
+        }
+      },
+      "auc_por_categoria": {
+        "Tutela": 0.9958662351672061,
+        "Inconstitucionalidad": 0.9772858683926645,
+        "Tratados": 0.9985415318230852,
+        "DecretosLegislativos": 0.9940970873786408,
+        "Objeciones": 0.9836723163841808
+      },
+      "fpr_macro": 0.019259978425026966,
+      "tpr_macro": 0.918761581920904,
+      "validacion_cruzada": [
+        {
+          "particion": 1,
+          "fpr": 0.018204301075268818,
+          "tpr": 0.9288888888888888
+        },
+        {
+          "particion": 2,
+          "fpr": 0.024505376344086026,
+          "tpr": 0.8924444444444444
+        },
+        {
+          "particion": 3,
+          "fpr": 0.0182972972972973,
+          "tpr": 0.9234285714285713
+        },
+        {
+          "particion": 4,
+          "fpr": 0.02037837837837838,
+          "tpr": 0.9119999999999999
+        },
+        {
+          "particion": 5,
+          "fpr": 0.014891891891891893,
+          "tpr": 0.937142857142857
+        }
+      ],
+      "terminos": {
+        "DecretosLegislativos": [
+          [
+            "decreto",
+            0.884
+          ],
+          [
+            "emergencia",
+            0.689
+          ],
+          [
+            "decreto legislativo",
+            0.545
+          ]
+        ],
+        "Inconstitucionalidad": [
+          [
+            "demanda",
+            0.689
+          ],
+          [
+            "norma",
+            0.653
+          ],
+          [
+            "acusada",
+            0.64
+          ]
+        ],
+        "Objeciones": [
+          [
+            "objeciones",
+            0.886
+          ],
+          [
+            "proyecto",
+            0.857
+          ],
+          [
+            "proyecto ley",
+            0.627
+          ]
+        ],
+        "Tratados": [
+          [
+            "convenio",
+            0.563
+          ],
+          [
+            "tratado",
+            0.56
+          ],
+          [
+            "internacional",
+            0.49
+          ]
+        ],
+        "Tutela": [
+          [
+            "tutela",
+            0.901
+          ],
+          [
+            "accion tutela",
+            0.61
+          ],
+          [
+            "sala",
+            0.431
+          ]
+        ]
+      },
+      "graficas": {
+        "dispersion": "tema_svm_lineal_dispersion.png",
+        "roc": "tema_svm_lineal_roc.png",
+        "aciertos": "tema_svm_lineal_aciertos.png",
+        "matriz": "tema_svm_lineal_matriz.png",
+        "palabras": "tema_svm_lineal_palabras.png"
+      }
+    },
+    "RandomForest": {
+      "hiperparametros": "300 árboles, Gini, raíz cuadrada de los rasgos por división, semilla 0",
+      "train_s": 8.97,
+      "parametros": {
+        "vectorizador_palabras": {
+          "analyzer": "word",
+          "max_df": 1.0,
+          "max_features": null,
+          "min_df": 2,
+          "ngram_range": [
+            1,
+            2
+          ],
+          "norm": "l2",
+          "sublinear_tf": true,
+          "use_idf": true
+        },
+        "vectorizador_caracteres": {
+          "analyzer": "char_wb",
+          "max_df": 1.0,
+          "max_features": 40000,
+          "min_df": 2,
+          "ngram_range": [
+            3,
+            5
+          ],
+          "norm": "l2",
+          "sublinear_tf": true,
+          "use_idf": true
+        },
+        "clasificador": {
+          "bootstrap": true,
+          "ccp_alpha": 0.0,
+          "class_weight": null,
+          "criterion": "gini",
+          "max_depth": null,
+          "max_features": "sqrt",
+          "max_leaf_nodes": null,
+          "max_samples": null,
+          "min_impurity_decrease": 0.0,
+          "min_samples_leaf": 1,
+          "min_samples_split": 2,
+          "min_weight_fraction_leaf": 0.0,
+          "monotonic_cst": null,
+          "n_estimators": 300,
+          "n_jobs": -1,
+          "oob_score": false,
+          "random_state": 0,
+          "verbose": 0,
+          "warm_start": false
+        },
+        "aprendidos": {
+          "clases": [
+            "DecretosLegislativos",
+            "Inconstitucionalidad",
+            "Objeciones",
+            "Tratados",
+            "Tutela"
+          ],
+          "rasgos": 66913,
+          "profundidad_media_arboles": 18.8
+        }
+      },
+      "latencia_ms": {
+        "media": 116.399,
+        "p50": 115.864,
+        "p95": 128.604,
+        "max": 190.959,
+        "documentos_por_s": 8.6,
+        "n": 118
+      },
+      "tamano_kb": 9773.8,
+      "por_clase_prueba": {
+        "Tutela": {
+          "precision": 0.9259,
+          "recall": 1.0,
+          "f1": 0.9615,
+          "soporte": 25
+        },
+        "Inconstitucionalidad": {
+          "precision": 1.0,
+          "recall": 0.8,
+          "f1": 0.8889,
+          "soporte": 25
+        },
+        "Tratados": {
+          "precision": 0.8333,
+          "recall": 1.0,
+          "f1": 0.9091,
+          "soporte": 25
+        },
+        "DecretosLegislativos": {
+          "precision": 0.92,
+          "recall": 0.92,
+          "f1": 0.92,
+          "soporte": 25
+        },
+        "Objeciones": {
+          "precision": 0.9375,
+          "recall": 0.8333,
+          "f1": 0.8824,
+          "soporte": 18
+        }
+      },
+      "por_clase_todos": {
+        "Tutela": {
+          "precision": 0.898,
+          "recall": 0.916,
+          "f1": 0.9069,
+          "soporte": 250
+        },
+        "Inconstitucionalidad": {
+          "precision": 0.8527,
+          "recall": 0.88,
+          "f1": 0.8661,
+          "soporte": 250
+        },
+        "Tratados": {
+          "precision": 0.8893,
+          "recall": 0.964,
+          "f1": 0.9251,
+          "soporte": 250
+        },
+        "DecretosLegislativos": {
+          "precision": 0.93,
+          "recall": 0.904,
+          "f1": 0.9168,
+          "soporte": 250
+        },
+        "Objeciones": {
+          "precision": 0.9533,
+          "recall": 0.8079,
+          "f1": 0.8746,
+          "soporte": 177
+        }
+      },
+      "val": {
+        "accuracy": 0.8940677966101694,
+        "f1_macro": 0.8951877196679485
+      },
+      "test": {
+        "accuracy": 0.9152542372881356,
+        "precision_macro": 0.9233518518518519,
+        "recall_macro": 0.9106666666666665,
+        "f1_macro": 0.9123742401389461,
+        "confusion_matrix": [
+          [
+            25,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            2,
+            20,
+            1,
+            1,
+            1
+          ],
+          [
+            0,
+            0,
+            25,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            2,
+            23,
+            0
+          ],
+          [
+            0,
+            0,
+            2,
+            1,
+            15
+          ]
+        ]
+      },
+      "test_aciertos": 108,
+      "total_prueba": 118,
+      "todos": {
+        "accuracy": 0.8997451146983857,
+        "precision_macro": 0.9046851545132972,
+        "recall_macro": 0.8943819209039547,
+        "f1_macro": 0.8979339632175461,
+        "confusion_matrix": [
+          [
+            229,
+            13,
+            4,
+            4,
+            0
+          ],
+          [
+            13,
+            220,
+            6,
+            6,
+            5
+          ],
+          [
+            3,
+            2,
+            241,
+            2,
+            2
+          ],
+          [
+            7,
+            7,
+            10,
+            226,
+            0
+          ],
+          [
+            3,
+            16,
+            10,
+            5,
+            143
+          ]
+        ]
+      },
+      "aciertos": 1059,
+      "errores": 118,
+      "total_documentos": 1177,
+      "por_categoria": {
+        "Tutela": {
+          "aciertos": 229,
+          "no_reconocidos": 21,
+          "falsos_positivos": 26,
+          "verdaderos_negativos": 901,
+          "tpr": 0.916,
+          "fpr": 0.028047464940668825
+        },
+        "Inconstitucionalidad": {
+          "aciertos": 220,
+          "no_reconocidos": 30,
+          "falsos_positivos": 38,
+          "verdaderos_negativos": 889,
+          "tpr": 0.88,
+          "fpr": 0.040992448759439054
+        },
+        "Tratados": {
+          "aciertos": 241,
+          "no_reconocidos": 9,
+          "falsos_positivos": 30,
+          "verdaderos_negativos": 897,
+          "tpr": 0.964,
+          "fpr": 0.032362459546925564
+        },
+        "DecretosLegislativos": {
+          "aciertos": 226,
+          "no_reconocidos": 24,
+          "falsos_positivos": 17,
+          "verdaderos_negativos": 910,
+          "tpr": 0.904,
+          "fpr": 0.018338727076591153
+        },
+        "Objeciones": {
+          "aciertos": 143,
+          "no_reconocidos": 34,
+          "falsos_positivos": 7,
+          "verdaderos_negativos": 993,
+          "tpr": 0.807909604519774,
+          "fpr": 0.007
+        }
+      },
+      "auc_por_categoria": {
+        "Tutela": 0.988302049622438,
+        "Inconstitucionalidad": 0.9755361380798274,
+        "Tratados": 0.9963732470334411,
+        "DecretosLegislativos": 0.9890140237324704,
+        "Objeciones": 0.964494350282486
+      },
+      "fpr_macro": 0.025348220064724918,
+      "tpr_macro": 0.8943819209039547,
+      "validacion_cruzada": [
+        {
+          "particion": 1,
+          "fpr": 0.02258064516129032,
+          "tpr": 0.912888888888889
+        },
+        {
+          "particion": 2,
+          "fpr": 0.03103225806451613,
+          "tpr": 0.8653333333333334
+        },
+        {
+          "particion": 3,
+          "fpr": 0.02245945945945946,
+          "tpr": 0.9039999999999999
+        },
+        {
+          "particion": 4,
+          "fpr": 0.022702702702702703,
+          "tpr": 0.9057142857142857
+        },
+        {
+          "particion": 5,
+          "fpr": 0.02794594594594595,
+          "tpr": 0.884
+        }
+      ],
+      "terminos": {
+        "_global": [
+          [
+            "decreto",
+            0.0023
+          ],
+          [
+            "tutela",
+            0.00197
+          ],
+          [
+            "relaciones",
+            0.00186
+          ],
+          [
+            "accion tutela",
+            0.00176
+          ],
+          [
+            "emergencia",
+            0.00162
+          ],
+          [
+            "objeciones",
+            0.00153
+          ],
+          [
+            "aprobatoria",
+            0.00143
+          ],
+          [
+            "internacional",
+            0.00137
+          ],
+          [
+            "ley aprobatoria",
+            0.00137
+          ],
+          [
+            "proyecto ley",
+            0.00134
+          ],
+          [
+            "proyecto",
+            0.00132
+          ],
+          [
+            "relaciones exteriores",
+            0.00112
+          ],
+          [
+            "gobierno",
+            0.00103
+          ],
+          [
+            "estados excepcion",
+            0.00095
+          ],
+          [
+            "es",
+            0.00093
+          ]
+        ]
+      },
+      "graficas": {
+        "dispersion": "tema_randomforest_dispersion.png",
+        "roc": "tema_randomforest_roc.png",
+        "aciertos": "tema_randomforest_aciertos.png",
+        "matriz": "tema_randomforest_matriz.png",
+        "palabras": "tema_randomforest_palabras.png"
+      }
+    }
+  },
+  "n_rasgos": 66913,
+  "split": {
+    "train": 823,
+    "val": 236,
+    "test": 118
+  },
+  "test": {
+    "accuracy": 0.923728813559322,
+    "precision_macro": 0.9261110705151626,
+    "recall_macro": 0.9217777777777776,
+    "f1_macro": 0.922869721473495,
+    "per_class": {
+      "Tutela": {
+        "precision": 0.96,
+        "recall": 0.96,
+        "f1-score": 0.96,
+        "support": 25.0
+      },
+      "Inconstitucionalidad": {
+        "precision": 0.88,
+        "recall": 0.88,
+        "f1-score": 0.88,
+        "support": 25.0
+      },
+      "Tratados": {
+        "precision": 0.8928571428571429,
+        "recall": 1.0,
+        "f1-score": 0.9433962264150944,
+        "support": 25.0
+      },
+      "DecretosLegislativos": {
+        "precision": 0.9565217391304348,
+        "recall": 0.88,
+        "f1-score": 0.9166666666666666,
+        "support": 25.0
+      },
+      "Objeciones": {
+        "precision": 0.9411764705882353,
+        "recall": 0.8888888888888888,
+        "f1-score": 0.9142857142857143,
+        "support": 18.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        24,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        1,
+        22,
+        1,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        25,
+        0,
+        0
+      ],
+      [
+        0,
+        2,
+        1,
+        22,
+        0
+      ],
+      [
+        0,
+        1,
+        1,
+        0,
+        16
+      ]
+    ],
+    "labels": [
+      "Tutela",
+      "Inconstitucionalidad",
+      "Tratados",
+      "DecretosLegislativos",
+      "Objeciones"
+    ]
+  },
+  "average_precision": {
+    "DecretosLegislativos": 0.9820552584458133,
+    "Inconstitucionalidad": 0.9443609918816818,
+    "Objeciones": 0.9849177512135461,
+    "Tratados": 1.0000000000000002,
+    "Tutela": 0.9412591087872958
+  },
+  "f1_conf_best": {
+    "threshold": 0.58,
+    "f1": 0.9275959595959595
+  },
+  "feedback_samples": 0,
+  "trained_at": "2026-10-28 00:47:50",
+  "parametros": {
+    "vectorizador_palabras": {
+      "analyzer": "word",
+      "max_df": 1.0,
+      "max_features": null,
+      "min_df": 2,
+      "ngram_range": [
+        1,
+        2
+      ],
+      "norm": "l2",
+      "sublinear_tf": true,
+      "use_idf": true
+    },
+    "vectorizador_caracteres": {
+      "analyzer": "char_wb",
+      "max_df": 1.0,
+      "max_features": 40000,
+      "min_df": 2,
+      "ngram_range": [
+        3,
+        5
+      ],
+      "norm": "l2",
+      "sublinear_tf": true,
+      "use_idf": true
+    },
+    "clasificador": {
+      "svm__C": 0.7,
+      "svm__class_weight": null,
+      "svm__dual": "auto",
+      "svm__fit_intercept": true,
+      "svm__intercept_scaling": 1,
+      "svm__loss": "squared_hinge",
+      "svm__max_iter": 1000,
+      "svm__multi_class": "ovr",
+      "svm__penalty": "l2",
+      "svm__random_state": null,
+      "svm__tol": 0.0001,
+      "svm__verbose": 0,
+      "cv": 3,
+      "ensemble": "auto",
+      "method": "sigmoid"
+    },
+    "aprendidos": {
+      "clases": [
+        "DecretosLegislativos",
+        "Inconstitucionalidad",
+        "Objeciones",
+        "Tratados",
+        "Tutela"
+      ],
+      "rasgos": 66913
+    }
+  },
+  "latencia_ms": {
+    "media": 15.89,
+    "p50": 14.996,
+    "p95": 20.401,
+    "max": 21.349,
+    "documentos_por_s": 62.9,
+    "n": 118
+  },
+  "curva_aprendizaje": [
+    {
+      "documentos": 82,
+      "f1_entrenamiento": 1.0,
+      "f1_validacion": 0.8440190222811825
+    },
+    {
+      "documentos": 164,
+      "f1_entrenamiento": 1.0,
+      "f1_validacion": 0.884129366250877
+    },
+    {
+      "documentos": 288,
+      "f1_entrenamiento": 1.0,
+      "f1_validacion": 0.8791316192506763
+    },
+    {
+      "documentos": 411,
+      "f1_entrenamiento": 1.0,
+      "f1_validacion": 0.9115654723957668
+    },
+    {
+      "documentos": 617,
+      "f1_entrenamiento": 1.0,
+      "f1_validacion": 0.9131404931395736
+    },
+    {
+      "documentos": 823,
+      "f1_entrenamiento": 1.0,
+      "f1_validacion": 0.9116368353056512
+    }
+  ],
+  "calibracion": {
+    "bins": [
+      {
+        "desde": 0.4,
+        "hasta": 0.5,
+        "n": 4,
+        "confianza": 0.4820330178844478,
+        "exactitud": 0.5
+      },
+      {
+        "desde": 0.5,
+        "hasta": 0.6,
+        "n": 4,
+        "confianza": 0.574297887449271,
+        "exactitud": 0.25
+      },
+      {
+        "desde": 0.6,
+        "hasta": 0.7,
+        "n": 9,
+        "confianza": 0.6518453107603204,
+        "exactitud": 0.6666666666666666
+      },
+      {
+        "desde": 0.7,
+        "hasta": 0.8,
+        "n": 9,
+        "confianza": 0.7446409175491153,
+        "exactitud": 1.0
+      },
+      {
+        "desde": 0.8,
+        "hasta": 0.9,
+        "n": 14,
+        "confianza": 0.8595059706313124,
+        "exactitud": 1.0
+      },
+      {
+        "desde": 0.9,
+        "hasta": 1.0,
+        "n": 78,
+        "confianza": 0.9530065850828575,
+        "exactitud": 0.9871794871794872
+      }
+    ],
+    "ece": 0.07146683218790777,
+    "confianza_media": 0.8742482788256023,
+    "exactitud": 0.923728813559322
+  },
+  "semilla": 42,
+  "criterio_seleccion": "mayor F1 macro en validación; en empate, menor tiempo de entrenamiento",
+  "origen_datos": {
+    "descripcion": "Sentencias reales de la Corte Constitucional de Colombia",
+    "texto": "Hugging Face, conjunto Manuel/sentencias-corte-cons-colombia-1992-2021 (licencia CC-BY-4.0)",
+    "etiquetas": "datos.gov.co, conjunto oficial Sentencias proferidas por la Corte Constitucional (columna proceso)",
+    "sentencias_publicadas": 23750,
+    "con_etiqueta_oficial": 29084,
+    "descartadas_sin_referencia": 305,
+    "descartadas_sin_etiqueta": 96,
+    "disponibles": {
+      "DecretosLegislativos": 341,
+      "Inconstitucionalidad": 5204,
+      "Objeciones": 177,
+      "Tratados": 431,
+      "Tutela": 17196
+    },
+    "usadas": {
+      "DecretosLegislativos": 250,
+      "Inconstitucionalidad": 250,
+      "Objeciones": 177,
+      "Tratados": 250,
+      "Tutela": 250
+    },
+    "total_usadas": 1177,
+    "desde": "1992-04-03",
+    "hasta": "2021-03-19",
+    "fragmento_caracteres": 3000,
+    "por_clase_max": 250,
+    "semilla": 42
+  }
+}

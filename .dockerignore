@@ -1,0 +1,22 @@
+# Lo que no entra a la imagen de la API (se monta como volumen o no hace falta)
+.git
+.venv
+venv
+**/__pycache__
+**/.pytest_cache
+**/node_modules
+frontend/dist
+whatsapp-gateway
+respaldos
+docs
+bufete
+.env
+backend/data/biblioteca
+backend/data/cuarentena
+backend/data/inbox
+backend/data/filemind.db
+backend/data/api_token.txt
+backend/data/*.log
+backend/data/*.pid
+backend/data/*.jsonl
+backend/data/escritorio_webview

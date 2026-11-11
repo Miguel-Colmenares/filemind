@@ -1,0 +1,24 @@
+[project]
+name = "filemind"
+version = "2.0.0"
+description = "FileMind: clasificación con IA y protocolo de seguridad para archivos compartidos en WhatsApp"
+requires-python = ">=3.10"
+authors = [
+  { name = "Miguel S. Colmenares" },
+  { name = "Juan D. Vargas" },
+  { name = "Nelson D. Quiroga" },
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 110
+target-version = "py310"
+extend-exclude = ["data"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B"]
+ignore = ["E501"]

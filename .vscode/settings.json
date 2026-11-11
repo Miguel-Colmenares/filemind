@@ -1,0 +1,38 @@
+{
+  // Intérprete: VS Code detecta solo el entorno .venv de la raíz (se crea con la tarea "Instalar todo").
+  "python.terminal.activateEnvironment": true,
+  "python.analysis.extraPaths": ["${workspaceFolder}/backend"],
+  "python.analysis.typeCheckingMode": "basic",
+
+  // Pruebas de requisitos (panel "Testing" de VS Code)
+  "python.testing.pytestEnabled": true,
+  "python.testing.unittestEnabled": false,
+  "python.testing.cwd": "${workspaceFolder}/backend",
+  "python.testing.pytestArgs": ["tests"],
+
+  "[python]": {
+    "editor.defaultFormatter": "charliermarsh.ruff",
+    "editor.formatOnSave": true,
+    "editor.rulers": [110]
+  },
+  "[javascript][javascriptreact][json][jsonc][css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.tabSize": 2
+  },
+  "prettier.singleQuote": true,
+  "prettier.printWidth": 130,
+
+  "files.exclude": {
+    "**/__pycache__": true,
+    "**/.pytest_cache": true,
+    "**/.ruff_cache": true
+  },
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/dist": true,
+    "backend/data/dataset": true,
+    ".venv": true
+  },
+  "files.associations": { "*.http": "http" },
+  "terminal.integrated.env.windows": { "PYTHONUTF8": "1" }
+}

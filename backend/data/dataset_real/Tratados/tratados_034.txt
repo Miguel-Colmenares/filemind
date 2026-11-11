@@ -1,0 +1,50 @@
+de vacío
+a) Distribuidores grandes de vacío, colectores de
+vacío y bombas de vacío, especialmente diseñados o preparados, cuya capacidad
+mínima de succión sea de 5 m3/min (175 pies3/min);
+b) Bombas de vacío especialmente diseñadas para
+funcionar en medios de UF6, fabricadas o recubiertas de aluminio, níquel o
+aleaciones cuyo componente en níquel sea superior al 60%. Dichas bombas pueden
+ser rotativas o impelentes, pueden tener desplazamiento y obturados de
+fluorocarbono y pueden tener fluidos especiales activos.
+5.4.4. Válvulas especiales de cierre y control
+Válvulas especiales de fuelle de cierre y de control,
+manuales o automáticas, especialmente diseñadas o preparadas, fabricadas con
+materiales resistentes al UF6, con diámetros de 40 mm a 1.500 mm (1,5 a 59
+pulgadas) para su instalación en los sistemas principal y auxiliares de plantas
+de enriquecimiento por difusión gaseosa.
+5.4.5. Espectrómetros de masa para UF6/fuentes de
+iones
+Espectrómetros de masas magnéticos o cuadripolos,
+especialmente diseñados o preparados, capaces de tomar muestras “en línea” de
+material de alimentación, producto o colas, de flujos de UF6 gaseoso y que
+presenten todas las características siguientes:
+1. Resolución unitaria para masa mayor de 320;
+2. Fuentes iónicas construidas o recubiertas de
+cromoníquel o metal monel o niqueladas;
+3. Fuentes de ionización por bombardeo de electrones;
+4. Sistema colector apropiado de análisis isotópico.
+NOTA EXPLICATIVA
+Los artículos que se enumeran supra entran en
+contacto directo con el UF6 gaseoso o controlan de manera directa el flujo
+dentro de la cascada. Todas las superficies que entran en contacto directo con
+el gas de trabajo están fabricadas o recubiertas con materiales resistentes al
+UF6. Por lo que toca a las secciones relativas a los elementos de equipo para
+difusión gaseosa, los materiales resistentes al efecto corrosivo del UF6
+incluyen el acero inoxidable, el aluminio, las aleaciones de aluminio, la
+alúmina, el níquel o las aleaciones que comprenden un 60% o más de níquel, y
+los polímeros de hidrocarburos totalmente fluorados resistentes al UF6.
+5.5. Sistemas, equipo y componentes especialmente
+diseñados o preparados para su utilización en plantas de enriquecimiento
+aerodinámico
+NOTA INTRODUCTORIA
+En los procesos de enriquecimiento aerodinámico, una
+mezcla de UF6 gaseoso y de un gas ligero (hidrógeno o helio) después de ser
+comprimida se hace pasar a través de elementos de separación en los que tiene
+lugar la separación isotópica por generación de elevadas fuerzas centrífugas en
+una pared curva. Se han desarrollado con éxito dos procesos de este tipo: el
+proceso de toberas y el de tubos vorticiales. En ambos procesos los principales
+componentes de la etapa de separación comprenden recipientes cilíndricos que
+contienen los elementos especiales de separación (toberas o tubos vorticiales),
+compresores de gas e intercambiadores de calor para eliminar el calor de
+compresión. Una planta aerodinámica requiere varias de

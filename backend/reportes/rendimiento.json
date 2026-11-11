@@ -1,0 +1,33 @@
+{
+  "RNF1": {
+    "archivos": 30,
+    "tamano_max_mb": 20.0,
+    "promedio_s": 0.346,
+    "maximo_s": 2.74,
+    "p95_s": 1.411,
+    "cumple": true
+  },
+  "RF2": {
+    "archivos": 10,
+    "promedio_s": 2.368,
+    "maximo_s": 3.617,
+    "cumple": true,
+    "nota": "Latencia medida desde que el archivo aparece en la carpeta hasta que termina la detección. Con el puente de WhatsApp se suma el tiempo de descarga del medio."
+  },
+  "RNF6": {
+    "un_grupo": {
+      "grupos": 1,
+      "archivos": 10,
+      "promedio_s": 0.179,
+      "p95_s": 0.266
+    },
+    "diez_grupos": {
+      "grupos": 10,
+      "archivos": 107,
+      "promedio_s": 0.132,
+      "p95_s": 0.27
+    },
+    "degradacion_pct": -26.3,
+    "cumple": true
+  }
+}

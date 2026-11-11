@@ -1,0 +1,77 @@
+LA
+REGION DE URABA - CONCIUDADANA -
+Presupuesto de Funcionamiento
+Numeral       1       Servicios
+Personales
+Artículo        018   Otros
+Gastos por Servicios Personales
+Ordinal         0001 Otros
+Gastos por Servicios Personales previo concepto DGPN
+Recurso        17     Crédito
+Interno Nacional                 200.000.000
+Numeral       2       Gastos
+Generales
+Artículo        012   Otros
+Gastos Generales
+Ordinal         0001 Otros
+Gastos Generales Previo concepto DGPN
+Recurso        17     Crédito
+Interno Nacional                 150.000.000
+Numeral       3       Transferencias
+Artículo        022   Otras
+Transferencias
+Ordinal         0001 Otras
+Transferencias Previo concepto DGPN
+Recurso        17     Crédito
+Interno Nacional                 70.000.000
+Total presupuesto de
+funcionamiento                            420.000.000
+Presupuesto de Inversión
+Programa     0320 Protección
+y Bienestar Social del Recurso Humano
+Subprograma        1501 Asistencia
+Directa a la Comunidad
+Proyecto       001   Fomento
+Especial de Desarrollo Económico y Social,
+Promoción
+de Mecanismos de Solidaridad y Participación
+Ciudadana
+para la Región de Urabá
+Recurso       17  Crédito
+Interno Nacional                 4.580.000.000
+Total presupuesto de
+inversión                                     4.580.000.000
+Total presupuesto de
+gastos                                 5.000.000.000
+ARTICULO 3º. El
+presente decreto rige a partir de la fecha de su publicación
+PUBLIQUESE Y CUMPLASE
+Dado en Santafé de Bogotá, D.C.
+Siguen firmas del
+Presidente de la República, once de sus ministros y cuatro Viceministros
+encargados de las funciones del Despacho del Ministro.
+II. ANTECEDENTES
+1.  El Presidente de
+la República, con la firma de once de sus ministros y cuatro viceministros
+encargados de las funciones de los respectivos ministerios, expidió el Decreto
+1532 de septiembre 13 de 1995 “por el cual se adiciona el Presupuesto General
+de la Nación para la vigencia fiscal de 1995”,  con base en las facultades que
+le confiere el artículo 213 de la Constitución Política y el artículo 38 de la
+Ley 137 de 1994, y en desarrollo del Decreto 1370 de 1995.
+2.  Mediante oficio
+de septiembre 14 de 1995, el Secretario General de la Presidencia de la
+República remitió al Presidente de la Corporación copia auténtica del decreto
+objeto de revisión.
+3.  Dentro del
+término fijado por la ley (D.L. 2067 de 1991) se recibieron un escrito de apoyo
+a la constitucionalidad del Decreto revisado por parte del Secretario Jurídico
+de la Presidencia de la República y el concepto fiscal de rigor rendido por el
+Jefe del Ministerio Público, en  el que solicita la declaratoria de
+inexequibilidad del decreto revisado.
+Intervención del
+Secretario Jurídico de la Presidencia de la República
+4. El Secretario
+Jurídico de la Presidencia de la República, facultado por el literal f) del
+artículo 4° del Decreto 1860 de 1991, solicita a la Corporación que declare la
+constitucionalidad del decreto objeto de revisión.
+A su juicio,

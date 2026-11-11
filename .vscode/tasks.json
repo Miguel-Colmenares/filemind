@@ -1,0 +1,72 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Instalar todo",
+      "dependsOrder": "sequence",
+      "dependsOn": ["Backend: crear entorno e instalar", "Interfaz: instalar dependencias", "Puente: instalar dependencias"],
+      "problemMatcher": []
+    },
+    {
+      "label": "Backend: crear entorno e instalar",
+      "type": "shell",
+      "command": "python3 -m venv .venv && .venv/bin/python -m pip install --upgrade pip && .venv/bin/python -m pip install -r backend/requirements.txt",
+      "windows": {
+        "command": "py -3 -m venv .venv; .venv\\Scripts\\python -m pip install --upgrade pip; .venv\\Scripts\\python -m pip install -r backend\\requirements.txt"
+      },
+      "options": { "cwd": "${workspaceFolder}" },
+      "problemMatcher": []
+    },
+    {
+      "label": "Interfaz: instalar dependencias",
+      "type": "shell",
+      "command": "npm install",
+      "options": { "cwd": "${workspaceFolder}/frontend" },
+      "problemMatcher": []
+    },
+    {
+      "label": "Puente: instalar dependencias",
+      "type": "shell",
+      "command": "npm install",
+      "options": { "cwd": "${workspaceFolder}/whatsapp-gateway" },
+      "problemMatcher": []
+    },
+    {
+      "label": "Entrenar modelos de IA",
+      "type": "shell",
+      "command": "${command:python.interpreterPath} scripts/entrenar.py",
+      "options": { "cwd": "${workspaceFolder}/backend", "env": { "PYTHONUTF8": "1" } },
+      "problemMatcher": []
+    },
+    {
+      "label": "Pruebas de requisitos",
+      "type": "shell",
+      "command": "${command:python.interpreterPath} -m pytest -v tests",
+      "options": { "cwd": "${workspaceFolder}/backend", "env": { "PYTHONUTF8": "1" } },
+      "group": { "kind": "test", "isDefault": true },
+      "problemMatcher": []
+    },
+    {
+      "label": "Pruebas de rendimiento",
+      "type": "shell",
+      "command": "${command:python.interpreterPath} scripts/pruebas_rendimiento.py",
+      "options": { "cwd": "${workspaceFolder}/backend", "env": { "PYTHONUTF8": "1" } },
+      "problemMatcher": []
+    },
+    {
+      "label": "Interfaz: compilar",
+      "type": "shell",
+      "command": "npm run build",
+      "options": { "cwd": "${workspaceFolder}/frontend" },
+      "group": { "kind": "build", "isDefault": true },
+      "problemMatcher": []
+    },
+    {
+      "label": "Docker: levantar todo",
+      "type": "shell",
+      "command": "docker compose up --build",
+      "options": { "cwd": "${workspaceFolder}" },
+      "problemMatcher": []
+    }
+  ]
+}

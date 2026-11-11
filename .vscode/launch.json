@@ -1,0 +1,83 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Backend: API FastAPI",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "filemind",
+      "args": ["serve", "--port", "8000"],
+      "cwd": "${workspaceFolder}/backend",
+      "env": { "PYTHONUTF8": "1" },
+      "justMyCode": true,
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "Interfaz: Vite (React)",
+      "type": "node-terminal",
+      "request": "launch",
+      "command": "npm run dev",
+      "cwd": "${workspaceFolder}/frontend",
+      "serverReadyAction": {
+        "pattern": "Local:\\s+(https?://\\S+)",
+        "uriFormat": "%s",
+        "action": "openExternally"
+      }
+    },
+    {
+      "name": "Puente de WhatsApp",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceFolder}/whatsapp-gateway/index.js",
+      "cwd": "${workspaceFolder}/whatsapp-gateway",
+      "console": "integratedTerminal",
+      "skipFiles": ["<node_internals>/**"]
+    },
+    {
+      "name": "Pruebas de requisitos (pytest)",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "pytest",
+      "args": ["-v", "tests"],
+      "cwd": "${workspaceFolder}/backend",
+      "env": { "PYTHONUTF8": "1" },
+      "console": "integratedTerminal",
+      "justMyCode": false
+    },
+    {
+      "name": "Entrenar modelos de IA",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/backend/scripts/entrenar.py",
+      "cwd": "${workspaceFolder}/backend",
+      "env": { "PYTHONUTF8": "1" },
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "Pruebas de rendimiento (RF2, RNF1, RNF6)",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/backend/scripts/pruebas_rendimiento.py",
+      "cwd": "${workspaceFolder}/backend",
+      "env": { "PYTHONUTF8": "1" },
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "Analizar archivo abierto",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "filemind",
+      "args": ["analizar", "${file}", "--grupo", "Obra Vía Puerto Gaitán"],
+      "cwd": "${workspaceFolder}/backend",
+      "env": { "PYTHONUTF8": "1" },
+      "console": "integratedTerminal"
+    }
+  ],
+  "compounds": [
+    {
+      "name": "FileMind completo (API + interfaz)",
+      "configurations": ["Backend: API FastAPI", "Interfaz: Vite (React)"],
+      "stopAll": true
+    }
+  ]
+}

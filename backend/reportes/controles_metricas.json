@@ -1,0 +1,843 @@
+{
+ "generado": "2026-10-07 00:14:35",
+ "dataset_original": {
+  "por_tipo": {
+   "legitimo/acortador_legit": {
+    "n": 19,
+    "cuarentena_antes": 0.0,
+    "cuarentena_despues": 0.0,
+    "solo_reglas_cuarentena_antes": 0.0,
+    "solo_reglas_cuarentena_despues": 0.0,
+    "solo_reglas_aviso_o_mas_antes": 0.0,
+    "solo_reglas_aviso_o_mas_despues": 0.0,
+    "reglas_media_antes": 10.0,
+    "reglas_media_despues": 10.0,
+    "controles_que_alertaron": {
+     "urls": 19
+    },
+    "segundos_max": 0.369,
+    "errores": []
+   },
+   "legitimo/doc": {
+    "n": 189,
+    "cuarentena_antes": 0.0,
+    "cuarentena_despues": 0.0,
+    "solo_reglas_cuarentena_antes": 0.0,
+    "solo_reglas_cuarentena_despues": 0.0,
+    "solo_reglas_aviso_o_mas_antes": 0.0,
+    "solo_reglas_aviso_o_mas_despues": 0.0,
+    "reglas_media_antes": 0.0,
+    "reglas_media_despues": 0.0,
+    "controles_que_alertaron": {},
+    "segundos_max": 2.478,
+    "errores": []
+   },
+   "legitimo/imagen": {
+    "n": 28,
+    "cuarentena_antes": 0.0,
+    "cuarentena_despues": 0.0,
+    "solo_reglas_cuarentena_antes": 0.0,
+    "solo_reglas_cuarentena_despues": 0.0,
+    "solo_reglas_aviso_o_mas_antes": 0.0,
+    "solo_reglas_aviso_o_mas_despues": 0.0,
+    "reglas_media_antes": 0.0,
+    "reglas_media_despues": 0.0,
+    "controles_que_alertaron": {},
+    "segundos_max": 2.287,
+    "errores": []
+   },
+   "legitimo/macro_benigna": {
+    "n": 23,
+    "cuarentena_antes": 0.0,
+    "cuarentena_despues": 0.0,
+    "solo_reglas_cuarentena_antes": 0.0,
+    "solo_reglas_cuarentena_despues": 0.0,
+    "solo_reglas_aviso_o_mas_antes": 0.0,
+    "solo_reglas_aviso_o_mas_despues": 0.0,
+    "reglas_media_antes": 15.0,
+    "reglas_media_despues": 15.0,
+    "controles_que_alertaron": {},
+    "segundos_max": 2.62,
+    "errores": []
+   },
+   "legitimo/pdf_openaction": {
+    "n": 18,
+    "cuarentena_antes": 0.0,
+    "cuarentena_despues": 0.0,
+    "solo_reglas_cuarentena_antes": 0.0,
+    "solo_reglas_cuarentena_despues": 0.0,
+    "solo_reglas_aviso_o_mas_antes": 0.0,
+    "solo_reglas_aviso_o_mas_despues": 0.0,
+    "reglas_media_antes": 8.0,
+    "reglas_media_despues": 8.0,
+    "controles_que_alertaron": {},
+    "segundos_max": 0.399,
+    "errores": []
+   },
+   "legitimo/urgente_real": {
+    "n": 37,
+    "cuarentena_antes": 0.0,
+    "cuarentena_despues": 0.0,
+    "solo_reglas_cuarentena_antes": 0.0,
+    "solo_reglas_cuarentena_despues": 0.0,
+    "solo_reglas_aviso_o_mas_antes": 0.0,
+    "solo_reglas_aviso_o_mas_despues": 0.0,
+    "reglas_media_antes": 11.5,
+    "reglas_media_despues": 11.5,
+    "controles_que_alertaron": {},
+    "segundos_max": 0.594,
+    "errores": []
+   },
+   "legitimo/url_oficial": {
+    "n": 46,
+    "cuarentena_antes": 0.0,
+    "cuarentena_despues": 0.0,
+    "solo_reglas_cuarentena_antes": 0.0,
+    "solo_reglas_cuarentena_despues": 0.0,
+    "solo_reglas_aviso_o_mas_antes": 0.0,
+    "solo_reglas_aviso_o_mas_despues": 0.0,
+    "reglas_media_antes": 0.0,
+    "reglas_media_despues": 0.0,
+    "controles_que_alertaron": {},
+    "segundos_max": 0.695,
+    "errores": []
+   },
+   "phishing/completo": {
+    "n": 61,
+    "cuarentena_antes": 1.0,
+    "cuarentena_despues": 1.0,
+    "solo_reglas_cuarentena_antes": 0.836,
+    "solo_reglas_cuarentena_despues": 1.0,
+    "solo_reglas_aviso_o_mas_antes": 1.0,
+    "solo_reglas_aviso_o_mas_despues": 1.0,
+    "reglas_media_antes": 90.0,
+    "reglas_media_despues": 98.6,
+    "controles_que_alertaron": {
+     "urls": 61,
+     "ingenieria_social": 61
+    },
+    "segundos_max": 0.66,
+    "errores": []
+   },
+   "phishing/html_login": {
+    "n": 12,
+    "cuarentena_antes": 1.0,
+    "cuarentena_despues": 1.0,
+    "solo_reglas_cuarentena_antes": 0.0,
+    "solo_reglas_cuarentena_despues": 1.0,
+    "solo_reglas_aviso_o_mas_antes": 1.0,
+    "solo_reglas_aviso_o_mas_despues": 1.0,
+    "reglas_media_antes": 55.7,
+    "reglas_media_despues": 100.0,
+    "controles_que_alertaron": {
+     "yara": 12,
+     "urls": 12,
+     "html": 12,
+     "ingenieria_social": 12
+    },
+    "segundos_max": 0.366,
+    "errores": []
+   },
+   "phishing/solo_enlace": {
+    "n": 19,
+    "cuarentena_antes": 1.0,
+    "cuarentena_despues": 1.0,
+    "solo_reglas_cuarentena_antes": 0.474,
+    "solo_reglas_cuarentena_despues": 0.474,
+    "solo_reglas_aviso_o_mas_antes": 0.789,
+    "solo_reglas_aviso_o_mas_despues": 0.789,
+    "reglas_media_antes": 62.1,
+    "reglas_media_despues": 62.1,
+    "controles_que_alertaron": {
+     "urls": 19
+    },
+    "segundos_max": 0.444,
+    "errores": []
+   },
+   "phishing/suplantacion_marca": {
+    "n": 39,
+    "cuarentena_antes": 1.0,
+    "cuarentena_despues": 1.0,
+    "solo_reglas_cuarentena_antes": 0.769,
+    "solo_reglas_cuarentena_despues": 0.974,
+    "solo_reglas_aviso_o_mas_antes": 1.0,
+    "solo_reglas_aviso_o_mas_despues": 1.0,
+    "reglas_media_antes": 78.9,
+    "reglas_media_despues": 95.7,
+    "controles_que_alertaron": {
+     "urls": 39,
+     "ingenieria_social": 38
+    },
+    "segundos_max": 0.628,
+    "errores": []
+   },
+   "phishing/sutil": {
+    "n": 39,
+    "cuarentena_antes": 1.0,
+    "cuarentena_despues": 1.0,
+    "solo_reglas_cuarentena_antes": 0.0,
+    "solo_reglas_cuarentena_despues": 0.0,
+    "solo_reglas_aviso_o_mas_antes": 0.0,
+    "solo_reglas_aviso_o_mas_despues": 0.923,
+    "reglas_media_antes": 23.1,
+    "reglas_media_despues": 50.8,
+    "controles_que_alertaron": {
+     "urls": 39,
+     "ingenieria_social": 36
+    },
+    "segundos_max": 0.638,
+    "errores": []
+   },
+   "ransomware/dde": {
+    "n": 16,
+    "cuarentena_antes": 1.0,
+    "cuarentena_despues": 1.0,
+    "solo_reglas_cuarentena_antes": 1.0,
+    "solo_reglas_cuarentena_despues": 1.0,
+    "solo_reglas_aviso_o_mas_antes": 1.0,
+    "solo_reglas_aviso_o_mas_despues": 1.0,
+    "reglas_media_antes": 75.0,
+    "reglas_media_despues": 100.0,
+    "controles_que_alertaron": {
+     "yara": 16
+    },
+    "segundos_max": 0.761,
+    "errores": []
+   },
+   "ransomware/doble_extension": {
+    "n": 21,
+    "cuarentena_antes": 1.0,
+    "cuarentena_despues": 1.0,
+    "solo_reglas_cuarentena_antes": 1.0,
+    "solo_reglas_cuarentena_despues": 1.0,
+    "solo_reglas_aviso_o_mas_antes": 1.0,
+    "solo_reglas_aviso_o_mas_despues": 1.0,
+    "reglas_media_antes": 100.0,
+    "reglas_media_despues": 100.0,
+    "controles_que_alertaron": {
+     "tipo_real": 21,
+     "entropia": 12,
+     "yara": 9
+    },
+    "segundos_max": 0.356,
+    "errores": []
+   },
+   "ransomware/docm_autoopen": {
+    "n": 22,
+    "cuarentena_antes": 1.0,
+    "cuarentena_despues": 1.0,
+    "solo_reglas_cuarentena_antes": 1.0,
+    "solo_reglas_cuarentena_despues": 1.0,
+    "solo_reglas_aviso_o_mas_antes": 1.0,
+    "solo_reglas_aviso_o_mas_despues": 1.0,
+    "reglas_media_antes": 90.9,
+    "reglas_media_despues": 100.0,
+    "controles_que_alertaron": {
+     "yara": 22,
+     "urls": 7,
+     "tipo_real": 7
+    },
+    "segundos_max": 0.942,
+    "errores": []
+   },
+   "ransomware/exe_disfrazado": {
+    "n": 7,
+    "cuarentena_antes": 1.0,
+    "cuarentena_despues": 1.0,
+    "solo_reglas_cuarentena_antes": 1.0,
+    "solo_reglas_cuarentena_despues": 1.0,
+    "solo_reglas_aviso_o_mas_antes": 1.0,
+    "solo_reglas_aviso_o_mas_despues": 1.0,
+    "reglas_media_antes": 100.0,
+    "reglas_media_despues": 100.0,
+    "controles_que_alertaron": {
+     "tipo_real": 7,
+     "entropia": 7
+    },
+    "segundos_max": 0.312,
+    "errores": []
+   },
+   "ransomware/exe_embebido": {
+    "n": 11,
+    "cuarentena_antes": 1.0,
+    "cuarentena_despues": 1.0,
+    "solo_reglas_cuarentena_antes": 1.0,
+    "solo_reglas_cuarentena_despues": 1.0,
+    "solo_reglas_aviso_o_mas_antes": 1.0,
+    "solo_reglas_aviso_o_mas_despues": 1.0,
+    "reglas_media_antes": 75.0,
+    "reglas_media_despues": 100.0,
+    "controles_que_alertaron": {
+     "yara": 11
+    },
+    "segundos_max": 0.845,
+    "errores": []
+   },
+   "ransomware/nota_rescate": {
+    "n": 7,
+    "cuarentena_antes": 1.0,
+    "cuarentena_despues": 1.0,
+    "solo_reglas_cuarentena_antes": 1.0,
+    "solo_reglas_cuarentena_despues": 1.0,
+    "solo_reglas_aviso_o_mas_antes": 1.0,
+    "solo_reglas_aviso_o_mas_despues": 1.0,
+    "reglas_media_antes": 89.3,
+    "reglas_media_despues": 92.9,
+    "controles_que_alertaron": {
+     "yara": 5
+    },
+    "segundos_max": 0.405,
+    "errores": []
+   },
+   "ransomware/ole_macro": {
+    "n": 18,
+    "cuarentena_antes": 1.0,
+    "cuarentena_despues": 1.0,
+    "solo_reglas_cuarentena_antes": 1.0,
+    "solo_reglas_cuarentena_despues": 1.0,
+    "solo_reglas_aviso_o_mas_antes": 1.0,
+    "solo_reglas_aviso_o_mas_despues": 1.0,
+    "reglas_media_antes": 90.0,
+    "reglas_media_despues": 100.0,
+    "controles_que_alertaron": {
+     "yara": 18,
+     "urls": 5
+    },
+    "segundos_max": 0.37,
+    "errores": []
+   },
+   "ransomware/pdf_hex": {
+    "n": 12,
+    "cuarentena_antes": 1.0,
+    "cuarentena_despues": 1.0,
+    "solo_reglas_cuarentena_antes": 0.333,
+    "solo_reglas_cuarentena_despues": 1.0,
+    "solo_reglas_aviso_o_mas_antes": 1.0,
+    "solo_reglas_aviso_o_mas_despues": 1.0,
+    "reglas_media_antes": 64.7,
+    "reglas_media_despues": 100.0,
+    "controles_que_alertaron": {
+     "pdf_activo": 12,
+     "urls": 1
+    },
+    "segundos_max": 0.409,
+    "errores": []
+   },
+   "ransomware/pdf_js": {
+    "n": 11,
+    "cuarentena_antes": 0.818,
+    "cuarentena_despues": 1.0,
+    "solo_reglas_cuarentena_antes": 0.0,
+    "solo_reglas_cuarentena_despues": 1.0,
+    "solo_reglas_aviso_o_mas_antes": 0.182,
+    "solo_reglas_aviso_o_mas_despues": 1.0,
+    "reglas_media_antes": 36.6,
+    "reglas_media_despues": 100.0,
+    "controles_que_alertaron": {
+     "pdf_activo": 11,
+     "urls": 4
+    },
+    "segundos_max": 0.364,
+    "errores": []
+   },
+   "ransomware/pdf_launch": {
+    "n": 7,
+    "cuarentena_antes": 1.0,
+    "cuarentena_despues": 1.0,
+    "solo_reglas_cuarentena_antes": 1.0,
+    "solo_reglas_cuarentena_despues": 1.0,
+    "solo_reglas_aviso_o_mas_antes": 1.0,
+    "solo_reglas_aviso_o_mas_despues": 1.0,
+    "reglas_media_antes": 100.0,
+    "reglas_media_despues": 100.0,
+    "controles_que_alertaron": {
+     "pdf_activo": 7,
+     "yara": 7
+    },
+    "segundos_max": 0.439,
+    "errores": []
+   },
+   "ransomware/pdf_objstm": {
+    "n": 15,
+    "cuarentena_antes": 0.733,
+    "cuarentena_despues": 1.0,
+    "solo_reglas_cuarentena_antes": 0.733,
+    "solo_reglas_cuarentena_despues": 1.0,
+    "solo_reglas_aviso_o_mas_antes": 0.733,
+    "solo_reglas_aviso_o_mas_despues": 1.0,
+    "reglas_media_antes": 68.3,
+    "reglas_media_despues": 100.0,
+    "controles_que_alertaron": {
+     "pdf_activo": 15,
+     "urls": 5
+    },
+    "segundos_max": 0.474,
+    "errores": []
+   },
+   "ransomware/plantilla_remota": {
+    "n": 11,
+    "cuarentena_antes": 1.0,
+    "cuarentena_despues": 1.0,
+    "solo_reglas_cuarentena_antes": 1.0,
+    "solo_reglas_cuarentena_despues": 1.0,
+    "solo_reglas_aviso_o_mas_antes": 1.0,
+    "solo_reglas_aviso_o_mas_despues": 1.0,
+    "reglas_media_antes": 95.0,
+    "reglas_media_despues": 95.0,
+    "controles_que_alertaron": {
+     "urls": 11
+    },
+    "segundos_max": 0.561,
+    "errores": []
+   },
+   "ransomware/powershell_b64": {
+    "n": 12,
+    "cuarentena_antes": 1.0,
+    "cuarentena_despues": 1.0,
+    "solo_reglas_cuarentena_antes": 1.0,
+    "solo_reglas_cuarentena_despues": 1.0,
+    "solo_reglas_aviso_o_mas_antes": 1.0,
+    "solo_reglas_aviso_o_mas_despues": 1.0,
+    "reglas_media_antes": 75.0,
+    "reglas_media_despues": 91.7,
+    "controles_que_alertaron": {
+     "yara": 8
+    },
+    "segundos_max": 0.623,
+    "errores": []
+   }
+  },
+  "global_final": {
+   "antes": {
+    "falsos_negativos": 0.018,
+    "falsos_positivos": 0.0,
+    "maliciosos": 340,
+    "legitimos": 360
+   },
+   "despues": {
+    "falsos_negativos": 0.0,
+    "falsos_positivos": 0.0,
+    "maliciosos": 340,
+    "legitimos": 360
+   }
+  },
+  "global_solo_reglas": {
+   "antes": {
+    "falsos_negativos": 0.303,
+    "falsos_positivos": 0.0,
+    "maliciosos": 340,
+    "legitimos": 360
+   },
+   "despues": {
+    "falsos_negativos": 0.147,
+    "falsos_positivos": 0.0,
+    "maliciosos": 340,
+    "legitimos": 360
+   }
+  },
+  "segundos_max_por_archivo": 2.62
+ },
+ "tecnicas_nuevas": {
+  "por_tipo": {
+   "legitimo/docx_con_excel": {
+    "n": 4,
+    "cuarentena_antes": 0.0,
+    "cuarentena_despues": 0.0,
+    "solo_reglas_cuarentena_antes": 0.0,
+    "solo_reglas_cuarentena_despues": 0.0,
+    "solo_reglas_aviso_o_mas_antes": 0.0,
+    "solo_reglas_aviso_o_mas_despues": 0.0,
+    "reglas_media_antes": 10.0,
+    "reglas_media_despues": 10.0,
+    "controles_que_alertaron": {},
+    "segundos_max": 0.603,
+    "errores": []
+   },
+   "legitimo/html_boletin": {
+    "n": 4,
+    "cuarentena_antes": 0.0,
+    "cuarentena_despues": 0.0,
+    "solo_reglas_cuarentena_antes": 0.0,
+    "solo_reglas_cuarentena_despues": 0.0,
+    "solo_reglas_aviso_o_mas_antes": 0.0,
+    "solo_reglas_aviso_o_mas_despues": 0.0,
+    "reglas_media_antes": 0.0,
+    "reglas_media_despues": 0.0,
+    "controles_que_alertaron": {},
+    "segundos_max": 0.308,
+    "errores": []
+   },
+   "legitimo/pdf_adjunto_xml": {
+    "n": 4,
+    "cuarentena_antes": 0.0,
+    "cuarentena_despues": 0.0,
+    "solo_reglas_cuarentena_antes": 0.0,
+    "solo_reglas_cuarentena_despues": 0.0,
+    "solo_reglas_aviso_o_mas_antes": 0.0,
+    "solo_reglas_aviso_o_mas_despues": 0.0,
+    "reglas_media_antes": 15.0,
+    "reglas_media_despues": 15.0,
+    "controles_que_alertaron": {},
+    "segundos_max": 0.364,
+    "errores": []
+   },
+   "legitimo/rtf_simple": {
+    "n": 4,
+    "cuarentena_antes": 0.0,
+    "cuarentena_despues": 0.0,
+    "solo_reglas_cuarentena_antes": 0.0,
+    "solo_reglas_cuarentena_despues": 0.0,
+    "solo_reglas_aviso_o_mas_antes": 0.0,
+    "solo_reglas_aviso_o_mas_despues": 0.0,
+    "reglas_media_antes": 0.0,
+    "reglas_media_despues": 0.0,
+    "controles_que_alertaron": {},
+    "segundos_max": 0.284,
+    "errores": []
+   },
+   "legitimo/zip_contrasena_legit": {
+    "n": 4,
+    "cuarentena_antes": 0.0,
+    "cuarentena_despues": 0.0,
+    "solo_reglas_cuarentena_antes": 0.0,
+    "solo_reglas_cuarentena_despues": 0.0,
+    "solo_reglas_aviso_o_mas_antes": 0.0,
+    "solo_reglas_aviso_o_mas_despues": 0.0,
+    "reglas_media_antes": 0.0,
+    "reglas_media_despues": 30.0,
+    "controles_que_alertaron": {
+     "comprimidos": 4
+    },
+    "segundos_max": 0.313,
+    "errores": []
+   },
+   "legitimo/zip_factura_electronica": {
+    "n": 4,
+    "cuarentena_antes": 0.0,
+    "cuarentena_despues": 0.0,
+    "solo_reglas_cuarentena_antes": 0.0,
+    "solo_reglas_cuarentena_despues": 0.0,
+    "solo_reglas_aviso_o_mas_antes": 0.0,
+    "solo_reglas_aviso_o_mas_despues": 0.0,
+    "reglas_media_antes": 0.0,
+    "reglas_media_despues": 0.0,
+    "controles_que_alertaron": {},
+    "segundos_max": 0.3,
+    "errores": []
+   },
+   "legitimo/zip_fotos": {
+    "n": 4,
+    "cuarentena_antes": 0.0,
+    "cuarentena_despues": 0.0,
+    "solo_reglas_cuarentena_antes": 0.0,
+    "solo_reglas_cuarentena_despues": 0.0,
+    "solo_reglas_aviso_o_mas_antes": 0.0,
+    "solo_reglas_aviso_o_mas_despues": 0.0,
+    "reglas_media_antes": 0.0,
+    "reglas_media_despues": 0.0,
+    "controles_que_alertaron": {},
+    "segundos_max": 0.372,
+    "errores": []
+   },
+   "malicioso/excel4_xlm": {
+    "n": 4,
+    "cuarentena_antes": 0.0,
+    "cuarentena_despues": 1.0,
+    "solo_reglas_cuarentena_antes": 0.0,
+    "solo_reglas_cuarentena_despues": 1.0,
+    "solo_reglas_aviso_o_mas_antes": 0.0,
+    "solo_reglas_aviso_o_mas_despues": 1.0,
+    "reglas_media_antes": 0.0,
+    "reglas_media_despues": 100.0,
+    "controles_que_alertaron": {
+     "macros_ole": 4,
+     "yara": 4
+    },
+    "segundos_max": 0.381,
+    "errores": []
+   },
+   "malicioso/html_contrabando": {
+    "n": 4,
+    "cuarentena_antes": 1.0,
+    "cuarentena_despues": 1.0,
+    "solo_reglas_cuarentena_antes": 1.0,
+    "solo_reglas_cuarentena_despues": 1.0,
+    "solo_reglas_aviso_o_mas_antes": 1.0,
+    "solo_reglas_aviso_o_mas_despues": 1.0,
+    "reglas_media_antes": 90.0,
+    "reglas_media_despues": 100.0,
+    "controles_que_alertaron": {
+     "yara": 4,
+     "entropia": 4
+    },
+    "segundos_max": 0.395,
+    "errores": []
+   },
+   "malicioso/html_enlace_enganoso": {
+    "n": 4,
+    "cuarentena_antes": 1.0,
+    "cuarentena_despues": 1.0,
+    "solo_reglas_cuarentena_antes": 0.0,
+    "solo_reglas_cuarentena_despues": 1.0,
+    "solo_reglas_aviso_o_mas_antes": 1.0,
+    "solo_reglas_aviso_o_mas_despues": 1.0,
+    "reglas_media_antes": 40.0,
+    "reglas_media_despues": 100.0,
+    "controles_que_alertaron": {
+     "urls": 4,
+     "html": 4
+    },
+    "segundos_max": 0.292,
+    "errores": []
+   },
+   "malicioso/lnk_disfrazado": {
+    "n": 4,
+    "cuarentena_antes": 1.0,
+    "cuarentena_despues": 1.0,
+    "solo_reglas_cuarentena_antes": 1.0,
+    "solo_reglas_cuarentena_despues": 1.0,
+    "solo_reglas_aviso_o_mas_antes": 1.0,
+    "solo_reglas_aviso_o_mas_despues": 1.0,
+    "reglas_media_antes": 100.0,
+    "reglas_media_despues": 100.0,
+    "controles_que_alertaron": {
+     "tipo_real": 4,
+     "yara": 4
+    },
+    "segundos_max": 0.29,
+    "errores": []
+   },
+   "malicioso/pdf_adjunto_exe": {
+    "n": 4,
+    "cuarentena_antes": 1.0,
+    "cuarentena_despues": 1.0,
+    "solo_reglas_cuarentena_antes": 1.0,
+    "solo_reglas_cuarentena_despues": 1.0,
+    "solo_reglas_aviso_o_mas_antes": 1.0,
+    "solo_reglas_aviso_o_mas_despues": 1.0,
+    "reglas_media_antes": 90.0,
+    "reglas_media_despues": 100.0,
+    "controles_que_alertaron": {
+     "pdf_activo": 4,
+     "yara": 1
+    },
+    "segundos_max": 0.314,
+    "errores": []
+   },
+   "malicioso/pdf_js_nombres": {
+    "n": 4,
+    "cuarentena_antes": 1.0,
+    "cuarentena_despues": 1.0,
+    "solo_reglas_cuarentena_antes": 0.0,
+    "solo_reglas_cuarentena_despues": 1.0,
+    "solo_reglas_aviso_o_mas_antes": 0.0,
+    "solo_reglas_aviso_o_mas_despues": 1.0,
+    "reglas_media_antes": 25.0,
+    "reglas_media_despues": 100.0,
+    "controles_que_alertaron": {
+     "pdf_activo": 4,
+     "urls": 4
+    },
+    "segundos_max": 0.34,
+    "errores": []
+   },
+   "malicioso/poliglota_jpg_zip": {
+    "n": 4,
+    "cuarentena_antes": 0.0,
+    "cuarentena_despues": 1.0,
+    "solo_reglas_cuarentena_antes": 0.0,
+    "solo_reglas_cuarentena_despues": 1.0,
+    "solo_reglas_aviso_o_mas_antes": 0.0,
+    "solo_reglas_aviso_o_mas_despues": 1.0,
+    "reglas_media_antes": 0.0,
+    "reglas_media_despues": 100.0,
+    "controles_que_alertaron": {
+     "tipo_real": 4,
+     "comprimidos": 4
+    },
+    "segundos_max": 0.299,
+    "errores": []
+   },
+   "malicioso/rtf_equation": {
+    "n": 4,
+    "cuarentena_antes": 0.0,
+    "cuarentena_despues": 1.0,
+    "solo_reglas_cuarentena_antes": 0.0,
+    "solo_reglas_cuarentena_despues": 1.0,
+    "solo_reglas_aviso_o_mas_antes": 0.0,
+    "solo_reglas_aviso_o_mas_despues": 1.0,
+    "reglas_media_antes": 0.0,
+    "reglas_media_despues": 100.0,
+    "controles_que_alertaron": {
+     "macros_ole": 4,
+     "yara": 4
+    },
+    "segundos_max": 0.304,
+    "errores": []
+   },
+   "malicioso/rtf_paquete": {
+    "n": 4,
+    "cuarentena_antes": 0.0,
+    "cuarentena_despues": 1.0,
+    "solo_reglas_cuarentena_antes": 0.0,
+    "solo_reglas_cuarentena_despues": 1.0,
+    "solo_reglas_aviso_o_mas_antes": 0.0,
+    "solo_reglas_aviso_o_mas_despues": 1.0,
+    "reglas_media_antes": 0.0,
+    "reglas_media_despues": 100.0,
+    "controles_que_alertaron": {
+     "macros_ole": 4,
+     "yara": 4
+    },
+    "segundos_max": 0.474,
+    "errores": []
+   },
+   "malicioso/zip_anidado": {
+    "n": 4,
+    "cuarentena_antes": 0.0,
+    "cuarentena_despues": 1.0,
+    "solo_reglas_cuarentena_antes": 0.0,
+    "solo_reglas_cuarentena_despues": 1.0,
+    "solo_reglas_aviso_o_mas_antes": 0.0,
+    "solo_reglas_aviso_o_mas_despues": 1.0,
+    "reglas_media_antes": 0.0,
+    "reglas_media_despues": 80.0,
+    "controles_que_alertaron": {
+     "comprimidos": 4
+    },
+    "segundos_max": 0.429,
+    "errores": []
+   },
+   "malicioso/zip_bomba": {
+    "n": 1,
+    "cuarentena_antes": 0.0,
+    "cuarentena_despues": 1.0,
+    "solo_reglas_cuarentena_antes": 0.0,
+    "solo_reglas_cuarentena_despues": 1.0,
+    "solo_reglas_aviso_o_mas_antes": 0.0,
+    "solo_reglas_aviso_o_mas_despues": 1.0,
+    "reglas_media_antes": 30.0,
+    "reglas_media_despues": 100.0,
+    "controles_que_alertaron": {
+     "comprimidos": 1
+    },
+    "segundos_max": 8.091,
+    "errores": []
+   },
+   "malicioso/zip_contrasena": {
+    "n": 4,
+    "cuarentena_antes": 0.0,
+    "cuarentena_despues": 1.0,
+    "solo_reglas_cuarentena_antes": 0.0,
+    "solo_reglas_cuarentena_despues": 1.0,
+    "solo_reglas_aviso_o_mas_antes": 0.0,
+    "solo_reglas_aviso_o_mas_despues": 1.0,
+    "reglas_media_antes": 0.0,
+    "reglas_media_despues": 90.0,
+    "controles_que_alertaron": {
+     "comprimidos": 4
+    },
+    "segundos_max": 0.348,
+    "errores": []
+   },
+   "malicioso/zip_eicar": {
+    "n": 4,
+    "cuarentena_antes": 0.0,
+    "cuarentena_despues": 1.0,
+    "solo_reglas_cuarentena_antes": 0.0,
+    "solo_reglas_cuarentena_despues": 1.0,
+    "solo_reglas_aviso_o_mas_antes": 0.0,
+    "solo_reglas_aviso_o_mas_despues": 1.0,
+    "reglas_media_antes": 0.0,
+    "reglas_media_despues": 100.0,
+    "controles_que_alertaron": {
+     "hashes": 4,
+     "comprimidos": 4,
+     "yara": 4
+    },
+    "segundos_max": 0.293,
+    "errores": []
+   },
+   "malicioso/zip_exe": {
+    "n": 4,
+    "cuarentena_antes": 1.0,
+    "cuarentena_despues": 1.0,
+    "solo_reglas_cuarentena_antes": 1.0,
+    "solo_reglas_cuarentena_despues": 1.0,
+    "solo_reglas_aviso_o_mas_antes": 1.0,
+    "solo_reglas_aviso_o_mas_despues": 1.0,
+    "reglas_media_antes": 75.0,
+    "reglas_media_despues": 100.0,
+    "controles_que_alertaron": {
+     "comprimidos": 4,
+     "yara": 3
+    },
+    "segundos_max": 1.297,
+    "errores": []
+   },
+   "malicioso/zip_macro": {
+    "n": 4,
+    "cuarentena_antes": 0.5,
+    "cuarentena_despues": 1.0,
+    "solo_reglas_cuarentena_antes": 0.0,
+    "solo_reglas_cuarentena_despues": 1.0,
+    "solo_reglas_aviso_o_mas_antes": 0.0,
+    "solo_reglas_aviso_o_mas_despues": 1.0,
+    "reglas_media_antes": 15.0,
+    "reglas_media_despues": 100.0,
+    "controles_que_alertaron": {
+     "comprimidos": 4,
+     "yara": 4,
+     "urls": 1
+    },
+    "segundos_max": 0.356,
+    "errores": []
+   },
+   "malicioso/zip_ruta": {
+    "n": 4,
+    "cuarentena_antes": 0.0,
+    "cuarentena_despues": 1.0,
+    "solo_reglas_cuarentena_antes": 0.0,
+    "solo_reglas_cuarentena_despues": 1.0,
+    "solo_reglas_aviso_o_mas_antes": 0.0,
+    "solo_reglas_aviso_o_mas_despues": 1.0,
+    "reglas_media_antes": 0.0,
+    "reglas_media_despues": 100.0,
+    "controles_que_alertaron": {
+     "comprimidos": 4
+    },
+    "segundos_max": 0.305,
+    "errores": []
+   }
+  },
+  "global_final": {
+   "antes": {
+    "falsos_negativos": 0.574,
+    "falsos_positivos": 0.0,
+    "maliciosos": 61,
+    "legitimos": 28
+   },
+   "despues": {
+    "falsos_negativos": 0.0,
+    "falsos_positivos": 0.0,
+    "maliciosos": 61,
+    "legitimos": 28
+   }
+  },
+  "global_solo_reglas": {
+   "antes": {
+    "falsos_negativos": 0.738,
+    "falsos_positivos": 0.0,
+    "maliciosos": 61,
+    "legitimos": 28
+   },
+   "despues": {
+    "falsos_negativos": 0.0,
+    "falsos_positivos": 0.0,
+    "maliciosos": 61,
+    "legitimos": 28
+   }
+  },
+  "segundos_max_por_archivo": 8.091
+ }
+}

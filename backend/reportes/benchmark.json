@@ -1,0 +1,493 @@
+{
+  "fecha": "2026-10-28 00:52",
+  "perfil": "constitucional",
+  "documentos": 1177,
+  "clases": [
+    "Tutela",
+    "Inconstitucionalidad",
+    "Tratados",
+    "DecretosLegislativos",
+    "Objeciones"
+  ],
+  "particion_prueba": 118,
+  "semilla": 42,
+  "procedimiento": "Validación cruzada estratificada de 5 particiones (cada documento se predice con un sistema que no lo vio). Tiempo por documento y robustez en el 10 % de prueba de la división 70/20/10 usada en el entrenamiento.",
+  "origen_datos": {
+    "descripcion": "Sentencias reales de la Corte Constitucional de Colombia",
+    "texto": "Hugging Face, conjunto Manuel/sentencias-corte-cons-colombia-1992-2021 (licencia CC-BY-4.0)",
+    "etiquetas": "datos.gov.co, conjunto oficial Sentencias proferidas por la Corte Constitucional (columna proceso)",
+    "desde": "1992-04-03",
+    "hasta": "2021-03-19"
+  },
+  "sistemas": {
+    "Clase más frecuente": {
+      "tipo": "trivial",
+      "accuracy": 0.21240441801189464,
+      "f1_macro": 0.0700770847932726,
+      "f1_macro_ic95": [
+        0.06347390993566834,
+        0.07643167270873455
+      ],
+      "f1_por_clase": {
+        "Tutela": 0.0,
+        "Inconstitucionalidad": 0.0,
+        "Tratados": 0.0,
+        "DecretosLegislativos": 0.350385423966363,
+        "Objeciones": 0.0
+      },
+      "f1_por_particion": [
+        0.06993006993006992,
+        0.06993006993006992,
+        0.07017543859649122,
+        0.07017543859649122,
+        0.07017543859649122
+      ],
+      "prueba_f1_macro": 0.06993006993006992,
+      "robustez_f1": {
+        "normal": 0.06993006993006992,
+        "corto_500": 0.06993006993006992,
+        "ruido_ocr_10": 0.06993006993006992
+      },
+      "latencia_ms": {
+        "media": 0.0,
+        "p50": 0.0,
+        "p95": 0.0,
+        "documentos_por_s": null
+      },
+      "entrenamiento_s": 0.001,
+      "tamano_kb": 1.0,
+      "matriz_confusion": [
+        [
+          0,
+          0,
+          0,
+          250,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          250,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          250,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          250,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          177,
+          0
+        ]
+      ],
+      "mcnemar_vs_filemind": {
+        "solo_filemind_acierta": 847,
+        "solo_el_otro_acierta": 18,
+        "p_valor": 7.979912567242531e-224
+      }
+    },
+    "Reglas por palabras clave": {
+      "tipo": "reglas",
+      "accuracy": 0.7408666100254885,
+      "f1_macro": 0.7465013069808317,
+      "f1_macro_ic95": [
+        0.7210503127580355,
+        0.7694505858603655
+      ],
+      "f1_por_clase": {
+        "Tutela": 0.6982248520710059,
+        "Inconstitucionalidad": 0.6933333333333334,
+        "Tratados": 0.7529976019184652,
+        "DecretosLegislativos": 0.8333333333333334,
+        "Objeciones": 0.7546174142480211
+      },
+      "f1_por_particion": [
+        0.7485294785669317,
+        0.7302709556492737,
+        0.7514876281406474,
+        0.7690322665518307,
+        0.7310414991712075
+      ],
+      "prueba_f1_macro": 0.7436442101168358,
+      "robustez_f1": {
+        "normal": 0.7436442101168358,
+        "corto_500": 0.4728087592573574,
+        "ruido_ocr_10": 0.618777705790084
+      },
+      "latencia_ms": {
+        "media": 5.2082644070358555,
+        "p50": 4.773200002091471,
+        "p95": 6.94508000378846,
+        "documentos_por_s": 192.00254093265653
+      },
+      "entrenamiento_s": 0.001,
+      "tamano_kb": 1.0,
+      "matriz_confusion": [
+        [
+          236,
+          12,
+          2,
+          0,
+          0
+        ],
+        [
+          80,
+          156,
+          4,
+          1,
+          9
+        ],
+        [
+          35,
+          8,
+          157,
+          0,
+          50
+        ],
+        [
+          53,
+          14,
+          3,
+          180,
+          0
+        ],
+        [
+          22,
+          10,
+          1,
+          1,
+          143
+        ]
+      ],
+      "mcnemar_vs_filemind": {
+        "solo_filemind_acierta": 234,
+        "solo_el_otro_acierta": 27,
+        "p_valor": 2.4679310841338343e-42
+      }
+    },
+    "Zero-shot TF-IDF": {
+      "tipo": "zero-shot",
+      "accuracy": 0.5709430756159728,
+      "f1_macro": 0.5668561472180161,
+      "f1_macro_ic95": [
+        0.5377003059106105,
+        0.5941964729921274
+      ],
+      "f1_por_clase": {
+        "Tutela": 0.7380497131931166,
+        "Inconstitucionalidad": 0.43902439024390244,
+        "Tratados": 0.453125,
+        "DecretosLegislativos": 0.5102040816326531,
+        "Objeciones": 0.6938775510204082
+      },
+      "f1_por_particion": [
+        0.5835659848425806,
+        0.5761901534242873,
+        0.5595982344868513,
+        0.5354160389065472,
+        0.5782573808183382
+      ],
+      "prueba_f1_macro": 0.6459694691273639,
+      "robustez_f1": {
+        "normal": 0.6459694691273639,
+        "corto_500": 0.3950934772020531,
+        "ruido_ocr_10": 0.513441859520291
+      },
+      "latencia_ms": {
+        "media": 3.3280457627971387,
+        "p50": 3.0832499978714623,
+        "p95": 4.836129994509974,
+        "documentos_por_s": 300.47663742445815
+      },
+      "entrenamiento_s": 1.877,
+      "tamano_kb": 3627.6,
+      "matriz_confusion": [
+        [
+          193,
+          8,
+          8,
+          40,
+          1
+        ],
+        [
+          28,
+          81,
+          20,
+          103,
+          18
+        ],
+        [
+          15,
+          9,
+          87,
+          95,
+          44
+        ],
+        [
+          31,
+          14,
+          14,
+          175,
+          16
+        ],
+        [
+          6,
+          7,
+          5,
+          23,
+          136
+        ]
+      ],
+      "mcnemar_vs_filemind": {
+        "solo_filemind_acierta": 432,
+        "solo_el_otro_acierta": 25,
+        "p_valor": 5.929389821753715e-97
+      }
+    },
+    "Zero-shot MiniLM": {
+      "tipo": "zero-shot preentrenado",
+      "accuracy": 0.4817332200509771,
+      "f1_macro": 0.4827403125072859,
+      "f1_macro_ic95": [
+        0.454808407095919,
+        0.5098175920879594
+      ],
+      "f1_por_clase": {
+        "Tutela": 0.621676891615542,
+        "Inconstitucionalidad": 0.35454545454545455,
+        "Tratados": 0.6153846153846154,
+        "DecretosLegislativos": 0.3594080338266385,
+        "Objeciones": 0.4626865671641791
+      },
+      "f1_por_particion": [
+        0.4831134778796975,
+        0.47807967762224796,
+        0.45650095272279356,
+        0.4688371943499215,
+        0.5204176922168117
+      ],
+      "prueba_f1_macro": 0.6052569273754754,
+      "robustez_f1": {
+        "normal": 0.6052569273754754,
+        "corto_500": 0.5908755959763241,
+        "ruido_ocr_10": 0.40050800401677594
+      },
+      "latencia_ms": {
+        "media": 63.02289237288987,
+        "p50": 62.26259999675676,
+        "p95": 68.02339999339893,
+        "documentos_por_s": 15.867250174480459
+      },
+      "entrenamiento_s": 0.054,
+      "tamano_kb": 459585.0,
+      "matriz_confusion": [
+        [
+          152,
+          51,
+          5,
+          24,
+          18
+        ],
+        [
+          39,
+          78,
+          18,
+          57,
+          58
+        ],
+        [
+          14,
+          7,
+          128,
+          35,
+          66
+        ],
+        [
+          22,
+          40,
+          10,
+          85,
+          93
+        ],
+        [
+          12,
+          14,
+          5,
+          22,
+          124
+        ]
+      ],
+      "mcnemar_vs_filemind": {
+        "solo_filemind_acierta": 543,
+        "solo_el_otro_acierta": 31,
+        "p_valor": 6.141306711105299e-122
+      }
+    },
+    "Naive Bayes (supervisado simple)": {
+      "tipo": "supervisado",
+      "accuracy": 0.897196261682243,
+      "f1_macro": 0.8932845513393046,
+      "f1_macro_ic95": [
+        0.875951242726813,
+        0.9105802432895098
+      ],
+      "f1_por_clase": {
+        "Tutela": 0.9260700389105059,
+        "Inconstitucionalidad": 0.8565737051792829,
+        "Tratados": 0.9266409266409267,
+        "DecretosLegislativos": 0.9072978303747534,
+        "Objeciones": 0.8498402555910544
+      },
+      "f1_por_particion": [
+        0.8994440360478096,
+        0.8825506650212531,
+        0.9053150183150184,
+        0.8967406061707088,
+        0.8828140024492745
+      ],
+      "prueba_f1_macro": 0.8905824930444991,
+      "robustez_f1": {
+        "normal": 0.8905824930444991,
+        "corto_500": 0.882339376001973,
+        "ruido_ocr_10": 0.8832142251179205
+      },
+      "latencia_ms": {
+        "media": 14.799530509369985,
+        "p50": 13.829250005073845,
+        "p95": 21.38704999597394,
+        "documentos_por_s": 67.56971103690572
+      },
+      "entrenamiento_s": 6.176,
+      "tamano_kb": 8056.9,
+      "matriz_confusion": [
+        [
+          238,
+          8,
+          2,
+          2,
+          0
+        ],
+        [
+          13,
+          215,
+          9,
+          10,
+          3
+        ],
+        [
+          0,
+          4,
+          240,
+          6,
+          0
+        ],
+        [
+          6,
+          8,
+          6,
+          230,
+          0
+        ],
+        [
+          7,
+          17,
+          11,
+          9,
+          133
+        ]
+      ],
+      "mcnemar_vs_filemind": {
+        "solo_filemind_acierta": 41,
+        "solo_el_otro_acierta": 18,
+        "p_valor": 0.0037937056353716074
+      }
+    },
+    "FileMind (SVM lineal)": {
+      "tipo": "supervisado",
+      "accuracy": 0.9167374681393373,
+      "f1_macro": 0.9147173659284548,
+      "f1_macro_ic95": [
+        0.8983359995743723,
+        0.9294544082756132
+      ],
+      "f1_por_clase": {
+        "Tutela": 0.9261477045908184,
+        "Inconstitucionalidad": 0.8695652173913043,
+        "Tratados": 0.968503937007874,
+        "DecretosLegislativos": 0.9224652087475149,
+        "Objeciones": 0.8869047619047619
+      },
+      "f1_por_particion": [
+        0.9017144398212359,
+        0.9039803151421711,
+        0.9402420242024203,
+        0.931638809497527,
+        0.8946590906396328
+      ],
+      "prueba_f1_macro": 0.922869721473495,
+      "robustez_f1": {
+        "normal": 0.922869721473495,
+        "corto_500": 0.8536913483342055,
+        "ruido_ocr_10": 0.9114411500449237
+      },
+      "latencia_ms": {
+        "media": 18.123226271724224,
+        "p50": 17.568400005984586,
+        "p95": 23.305485001037596,
+        "documentos_por_s": 55.17781354196275
+      },
+      "entrenamiento_s": 8.137,
+      "tamano_kb": 10152.6,
+      "matriz_confusion": [
+        [
+          232,
+          12,
+          1,
+          4,
+          1
+        ],
+        [
+          11,
+          220,
+          7,
+          8,
+          4
+        ],
+        [
+          0,
+          3,
+          246,
+          0,
+          1
+        ],
+        [
+          4,
+          8,
+          2,
+          232,
+          4
+        ],
+        [
+          4,
+          13,
+          2,
+          9,
+          149
+        ]
+      ]
+    }
+  }
+}

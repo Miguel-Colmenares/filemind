@@ -1,0 +1,64 @@
+# FileMind en Docker: API + interfaz web (servicio «filemind») y puente de WhatsApp («whatsapp»).
+# Uso: cp .env.example .env  →  docker compose up -d --build  →  abrir http://127.0.0.1:8000
+# Ver DEPLOY.md para HTTPS, el primer administrador y la vinculación de WhatsApp.
+#
+# RNF2: reinicio automático + healthcheck.
+# RNF5: con FILEMIND_SANDBOX_BACKEND=docker el análisis aislado corre en contenedores hermanos
+#       sin red (--network none, --read-only) a través del socket de Docker. Montar el socket
+#       da a este contenedor control total de Docker en el servidor: lee DEPLOY.md antes de usarlo.
+services:
+  filemind:
+    build: .
+    restart: unless-stopped
+    # solo en localhost: el acceso desde internet va por el proxy con HTTPS (DEPLOY.md)
+    ports: ["127.0.0.1:${FILEMIND_PORT:-8000}:8000"]
+    env_file:
+      - path: .env
+        required: false
+    environment:
+      # dentro de Docker el puente es su propio servicio: la API no debe intentar encenderlo
+      FILEMIND_WHATSAPP_AUTOSTART: "false"
+      FILEMIND_SANDBOX_BACKEND: ${FILEMIND_SANDBOX_BACKEND:-docker}
+      # confiar en las cabeceras X-Forwarded-* del proxy (cookie de sesión con «Secure» bajo HTTPS)
+      FORWARDED_ALLOW_IPS: ${FORWARDED_ALLOW_IPS:-*}
+      # nombre que ve el usuario para /bufete en el selector de carpetas
+      FILEMIND_BUFETE_LABEL: ${FILEMIND_BUFETE_HOST:-carpeta bufete del proyecto}
+      FILEMIND_PC_LABEL: ${FILEMIND_PC_HOST:-}
+    volumes:
+      # base de datos, modelos, biblioteca, cuarentena cifrada, registros y token del puente
+      - ./backend/data:/app/backend/data
+      - ./backend/reportes:/app/backend/reportes
+      # carpeta del bufete: en Configuración escoge /bufete como carpeta.
+      # FILEMIND_BUFETE_HOST (en .env) = carpeta real del PC, p. ej. C:/Users/Yo/Documents/FileMind_Bufete
+      - ${FILEMIND_BUFETE_HOST:-./bufete}:/bufete
+      # FILEMIND_PC_HOST (en .env) = disco o carpeta del PC que se puede recorrer en el selector, p. ej. C:/
+      - ${FILEMIND_PC_HOST:-./bufete}:/pc
+      # análisis aislado con contenedores hermanos (solo con FILEMIND_SANDBOX_BACKEND=docker)
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /tmp:/tmp
+
+  whatsapp:
+    build: ./whatsapp-gateway
+    restart: unless-stopped
+    # Chromium necesita memoria compartida
+    shm_size: 512m
+    environment:
+      FILEMIND_URL: http://filemind:8000
+      FILEMIND_TOKEN_FILE: /filemind-data/api_token.txt
+      NOTIFY_TO: ${NOTIFY_TO:-}
+      NOTIFY_IN_GROUP: ${NOTIFY_IN_GROUP:-true}
+      EXPORT_LIMIT: ${EXPORT_LIMIT:-1000}
+    volumes:
+      # sesión vinculada de WhatsApp: si se borra, hay que volver a escanear el QR
+      - whatsapp-sesion:/gateway/.wwebjs_auth
+      # archivos que esperan a que la API vuelva (cola sin pérdida)
+      - whatsapp-pendientes:/gateway/.pendientes
+      # el puente lee el token de servicio que genera la API
+      - ./backend/data:/filemind-data:ro
+    depends_on:
+      filemind:
+        condition: service_healthy
+
+volumes:
+  whatsapp-sesion:
+  whatsapp-pendientes:

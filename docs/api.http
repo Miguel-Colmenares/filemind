@@ -1,0 +1,51 @@
+### Ejemplos de la API de FileMind (extensión REST Client de VS Code: clic en "Send Request")
+@base = http://127.0.0.1:8000
+@token =
+
+### Estado del servicio
+GET {{base}}/health
+
+### Grupos monitoreados
+GET {{base}}/api/grupos
+
+### Cambiar grupos
+PUT {{base}}/api/grupos
+Content-Type: application/json
+X-FileMind-Token: {{token}}
+
+{ "grupos": ["Obra Vía Puerto Gaitán", "Compras Vichada", "Residentes de obra"] }
+
+### Analizar un archivo (cambia la ruta por un archivo tuyo)
+POST {{base}}/api/ingest
+X-FileMind-Token: {{token}}
+Content-Type: multipart/form-data; boundary=FM
+
+--FM
+Content-Disposition: form-data; name="grupo"
+
+Compras Vichada
+--FM
+Content-Disposition: form-data; name="remitente"
+
++57 310 000 0000
+--FM
+Content-Disposition: form-data; name="file"; filename="README.md"
+Content-Type: application/octet-stream
+
+< ../README.md
+--FM--
+
+### Archivos en cuarentena
+GET {{base}}/api/archivos?estado=cuarentena
+
+### Estadísticas
+GET {{base}}/api/estadisticas
+
+### Métricas de los modelos de IA
+GET {{base}}/api/modelos
+
+### Últimos eventos de auditoría
+GET {{base}}/api/eventos?limite=20
+
+### Retención de la auditoría (RNF8)
+GET {{base}}/api/auditoria/retencion
